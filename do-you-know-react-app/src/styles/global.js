@@ -25,13 +25,11 @@ export const GlobalStyle = createGlobalStyle`
         list-style: none;
     }
 
-    
-
-
+ 
 `;
 
 export const GlobalContainer = styled.div`
-  height: 100vh;
-  width: 90vw;
-  margin: 0 auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 `;

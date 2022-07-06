@@ -1,7 +1,7 @@
 import { Input } from "./styled";
 
-function InputExample() {
+const InputExample = () => {
   return <Input placeholder="Username" />;
-}
+};
 
 export default InputExample;
