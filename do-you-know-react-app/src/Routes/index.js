@@ -1,5 +1,7 @@
 import { Switch, Route } from "react-router-dom";
 import HomePage from "../Pages/HomePage";
+import PreQuestion from "../Pages/PreQuestion";
+
 import SuccessfulRegisterPage from "../Pages/SuccessfulRegisterPage";
 
 function Routes() {
@@ -10,6 +12,9 @@ function Routes() {
       </Route>
       <Route exact path="/successful-register">
         <SuccessfulRegisterPage />
+      </Route>
+      <Route exact path="/prequestion">
+        <PreQuestion />
       </Route>
     </Switch>
   );
