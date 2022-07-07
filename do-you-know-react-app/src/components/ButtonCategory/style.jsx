@@ -9,7 +9,6 @@ export const StyledButtonCategory = styled.button`
   background-color: #1e4e9d;
 
   border-radius: 3.375rem;
-  border: none;
 
   &:hover {
     background: #2af4fe;
