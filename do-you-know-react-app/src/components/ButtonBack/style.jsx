@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledButtonBack = styled.button`
+
   font-size: 1.1875rem;
   font-weight: 300;
   line-height: 1.75rem;
