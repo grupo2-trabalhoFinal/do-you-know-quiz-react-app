@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import blueBackground from "../../Assets/blueBackground.svg";
 
-const PreQuestionContainer = styled.div`
+const QuestionBackground = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,11 +13,6 @@ const PreQuestionContainer = styled.div`
   background-repeat: no-repeat;
   background-color: #1e4e9d;
   background-size: cover;
-
-  img {
-    margin-right: 22px;
-    padding: 15px;
-  }
 `;
 
-export default PreQuestionContainer;
+export default QuestionBackground;
