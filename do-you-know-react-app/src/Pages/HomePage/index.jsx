@@ -12,9 +12,13 @@ const HomePage = () => {
 
   return (
     <HomePageContainer>
-      <img src={Logo} alt="Logo" style={{ width: "80vw" }} />
-      <GoToRegisterButton>CADASTRO</GoToRegisterButton>
-      <GoToLoginButton>LOGIN</GoToLoginButton>
+      <img src={Logo} alt="Logo" style={{ width: "70vw" }} />
+      <GoToRegisterButton onClick={() => history.push("/register")}>
+        CADASTRO
+      </GoToRegisterButton>
+      <GoToLoginButton onClick={() => history.push("/login")}>
+        LOGIN
+      </GoToLoginButton>
     </HomePageContainer>
   );
 };
