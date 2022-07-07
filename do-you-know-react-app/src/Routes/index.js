@@ -1,7 +1,10 @@
 import { Switch, Route } from "react-router-dom";
 import HomePage from "../Pages/HomePage";
-import SuccessfulRegisterPage from "../Pages/SuccessfulRegisterPage";
+import FirstPage from "../Pages/FirstPage"
+import PreQuestion from "../Pages/PreQuestion";
+import QuestionPage from "../Pages/QuestionPage";
 
+import SuccessfulRegisterPage from "../Pages/SuccessfulRegisterPage";
 
 function Routes() {
   return (
@@ -12,8 +15,15 @@ function Routes() {
       <Route exact path="/successful-register">
         <SuccessfulRegisterPage />
       </Route>
-      
-      
+      <Route exact path="/home">
+        <FirstPage></FirstPage>
+      </Route>
+      <Route exact path="/prequestion">
+        <PreQuestion />
+      </Route>
+      <Route exact path="/question">
+        <QuestionPage />
+      </Route>
     </Switch>
   );
 }
