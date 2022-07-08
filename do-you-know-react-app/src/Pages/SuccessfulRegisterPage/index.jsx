@@ -14,7 +14,7 @@ const SuccessfulRegisterPage = () => {
         style={{ width: "50vw" }}
       ></img>
       <h2>CADASTRO EFETUADO COM SUCESSO!</h2>
-      <SuccessPageButton onClick={history.push("/login")}>
+      <SuccessPageButton onClick={() => history.push("/login")}>
         LOGIN
       </SuccessPageButton>
     </SuccessfulPageContainer>
