@@ -4,7 +4,7 @@ import LoginPage from "../Pages/LoginPage";
 import PreQuestion from "../Pages/PreQuestion";
 import QuestionPage from "../Pages/QuestionPage";
 import RegisterPage from "../Pages/RegisterPage";
-
+import ScoreRankingPage from "../Pages/ScoreRankingPage";
 import SuccessfulRegisterPage from "../Pages/SuccessfulRegisterPage";
 
 //depois de colocar a page "preQuestion" no useHistory, retirar ela daqui da rota
@@ -29,6 +29,9 @@ function Routes() {
       </Route>
       <Route exact path="/question">
         <QuestionPage />
+      </Route>
+      <Route exact path="/score-ranking-page">
+        <ScoreRankingPage />
       </Route>
     </Switch>
   );
