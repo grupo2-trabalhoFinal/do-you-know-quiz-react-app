@@ -16,6 +16,7 @@ const CategoryPage = () => {
     <GlobalContainer>
       <StyledCategoryPage>
         <TitleCategory>Categoria</TitleCategory>
+
         <ContainerListCategory>
           {listCategorys.map((category, index) => {
             return (
