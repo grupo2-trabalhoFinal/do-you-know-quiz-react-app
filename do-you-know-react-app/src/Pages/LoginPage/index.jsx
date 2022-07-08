@@ -10,23 +10,22 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useHistory } from "react-router-dom";
+import api from "../../services/api";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
   const history = useHistory();
 
   const schema = yup.object().shape({
-    Username: yup
+    email: yup
       .string()
-      .required("Usuário obrigatório !")
-      .min(3, "Mínimo de 3 caractéres !"),
+      .required("Email obrigatório !")
+      .email("Formato de email inválido !"),
 
-    Password: yup
+    password: yup
       .string()
       .required("Senha obrigatória !")
-      .matches(
-        /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/,
-        "Necessário de no mínimo 8 caracteres, uma letra maiúscula, uma minúscula e um número !"
-      ),
+      .min(8, "Necessário de no mínimo 8 caracteres"),
   });
 
   const {
@@ -39,8 +38,15 @@ const LoginPage = () => {
   });
 
   const submitedForm = (data) => {
-    reset();
-    console.log(data);
+    api
+      .post("/login", data)
+      .then((response) => {
+        const { token } = response.data;
+        localStorage.setItem("@quizToken", JSON.stringify(token));
+
+        return history.push("/");
+      })
+      .catch((err) => toast.error("Confira os dados e tente novamente"));
   };
 
   return (
@@ -53,19 +59,19 @@ const LoginPage = () => {
 
       <RegisterForm onSubmit={handleSubmit(submitedForm)}>
         <label>
-          USUÁRIO {errors.Username && <span>- {errors.Username.message}</span>}
+          EMAIL {errors.email && <span>- {errors.email.message}</span>}
         </label>
         <InputExample
-          name="Username"
+          name="email"
           register={register}
-          placeholder="Choose a username !"
+          placeholder="Seu email !"
         ></InputExample>
 
         <label>
-          SENHA {errors.Password && <span>- {errors.Password.message}</span>}
+          SENHA {errors.password && <span>- {errors.password.message}</span>}
         </label>
         <InputExample
-          name="Password"
+          name="password"
           register={register}
           placeholder="************"
           type="password"
