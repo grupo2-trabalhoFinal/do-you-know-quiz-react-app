@@ -41,8 +41,8 @@ const LoginPage = () => {
     api
       .post("/login", data)
       .then((response) => {
-        const { token } = response.data;
-        localStorage.setItem("@quizToken", JSON.stringify(token));
+        const { accessToken } = response.data;
+        localStorage.setItem("@quizToken", JSON.stringify(accessToken));
 
         return history.push("/");
       })
