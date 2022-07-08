@@ -1,5 +1,7 @@
+import { StyledTitleCategory } from "./style";
+
 const TitleCategory = () => {
-  return <StyledTitleCategory>Example Title</StyledTitleCategory>;
+  return <StyledTitleCategory>Selecione o tema</StyledTitleCategory>;
 };
 
 export default TitleCategory;
