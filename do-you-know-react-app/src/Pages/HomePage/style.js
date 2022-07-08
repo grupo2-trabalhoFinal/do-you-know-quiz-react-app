@@ -17,12 +17,12 @@ export const HomePageContainer = styled.div`
   background-size: cover;
 
   img {
-    margin-right: 15px;
+    margin-right: 25px;
   }
 `;
 
 export const GoToRegisterButton = styled.button`
-  height: 3rem;
+  height: 3.3rem;
   width: 70vw;
 
   background-color: #1e4e9d;
