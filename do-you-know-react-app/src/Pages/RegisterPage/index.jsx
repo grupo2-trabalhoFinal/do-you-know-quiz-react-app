@@ -10,33 +10,36 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useHistory } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../../context/UserContext";
+import api from "../../services/api";
+import { toast } from "react-toastify";
 
 const RegisterPage = () => {
   const history = useHistory();
 
   const schema = yup.object().shape({
-    Username: yup
+    name: yup
       .string()
       .required("Usuário obrigatório !")
       .min(3, "Mínimo de 3 caractéres !"),
 
-    Email: yup
+    email: yup
       .string()
       .required("Email obrigatório !")
       .email("Formato de email inválido !"),
 
-    Password: yup
+    password: yup
       .string()
       .required("Senha obrigatória !")
-      .matches(
-        /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/,
-        "Necessário de no mínimo 8 caracteres, uma letra maiúscula, uma minúscula e um número !"
-      ),
+      .min(8, "Necessário de no mínimo 8 caracteres"),
 
-    ConfirmPassword: yup
+    confirmPassword: yup
       .string()
       .required("Confirmação de senha obrigatória")
-      .oneOf([yup.ref("Password")], "As senhas devem ser identicas !"),
+      .oneOf([yup.ref("password")], "As senhas devem ser identicas !"),
+
+    age: yup.string().required("Idade obrigatoria"),
   });
 
   const {
@@ -48,10 +51,15 @@ const RegisterPage = () => {
     resolver: yupResolver(schema),
   });
 
-  const submitedForm = (data) => {
-    reset();
-    console.log(data);
-    history.push("/successful-register");
+  const submitedForm = ({ email, password, name, age }) => {
+    const user = { email, password, name, age };
+    api
+      .post("/register", user)
+      .then((response) => {
+        toast.success("Conta criada com sucesso");
+        return history.push("/successful-register");
+      })
+      .catch((err) => toast.error("Erro ao criar a conta"));
   };
 
   return (
@@ -64,28 +72,39 @@ const RegisterPage = () => {
 
       <RegisterForm onSubmit={handleSubmit(submitedForm)}>
         <label>
-          USUÁRIO {errors.Username && <span>- {errors.Username.message}</span>}
+          USUÁRIO {errors.name && <span>- {errors.name.message}</span>}
         </label>
         <InputExample
-          name="Username"
+          name="name"
           register={register}
-          placeholder="Choose a username !"
+          placeholder="Crie seu nome de usuario !"
         ></InputExample>
 
         <label>
-          EMAIL {errors.Email && <span>- {errors.Email.message}</span>}
+          EMAIL {errors.email && <span>- {errors.email.message}</span>}
         </label>
         <InputExample
-          name="Email"
+          name="email"
           register={register}
-          placeholder="Email address !"
+          placeholder="Seu email !"
         ></InputExample>
 
         <label>
-          SENHA {errors.Password && <span>- {errors.Password.message}</span>}
+          IDADE
+          {errors.age && <span>- {errors.age.message}</span>}
         </label>
         <InputExample
-          name="Password"
+          name="age"
+          register={register}
+          placeholder="Sua idade"
+          type="text"
+        ></InputExample>
+
+        <label>
+          SENHA {errors.password && <span>- {errors.password.message}</span>}
+        </label>
+        <InputExample
+          name="password"
           register={register}
           placeholder="************"
           type="password"
@@ -93,12 +112,12 @@ const RegisterPage = () => {
 
         <label>
           CONFIRMAR SENHA{" "}
-          {errors.ConfirmPassword && (
-            <span>- {errors.ConfirmPassword.message}</span>
+          {errors.confirmPassword && (
+            <span>- {errors.confirmPassword.message}</span>
           )}
         </label>
         <InputExample
-          name="ConfirmPassword"
+          name="confirmPassword"
           register={register}
           placeholder="************"
           type="password"
