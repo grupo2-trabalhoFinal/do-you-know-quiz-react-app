@@ -1,4 +1,5 @@
 import { Switch, Route } from "react-router-dom";
+import CategoryPage from "../Pages/CategoryPage";
 import HomePage from "../Pages/HomePage";
 import LoginPage from "../Pages/LoginPage";
 import PreQuestion from "../Pages/PreQuestion";
@@ -29,6 +30,9 @@ function Routes() {
       </Route>
       <Route exact path="/question">
         <QuestionPage />
+      </Route>
+      <Route exact path="/category">
+        <CategoryPage />
       </Route>
     </Switch>
   );
