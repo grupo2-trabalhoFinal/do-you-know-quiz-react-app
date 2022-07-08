@@ -8,12 +8,19 @@ export const StyledCategoryPage = styled.div`
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+  justify-content: center;
 
-  min-width: 20rem;
-  min-height: 27.5rem;
+  min-width: 100vw;
+  min-height: 100vh;
 
-  background: url(${background});
+  background: url(${background}) no-repeat;
   background-size: cover;
+  background-position: center;
+
+  @media (min-width: 321px) {
+    width: 100%;
+    padding: 3rem;
+  }
 `;
 
 export const ContainerListCategory = styled.div`

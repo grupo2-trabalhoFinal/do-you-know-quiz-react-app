@@ -5,7 +5,7 @@ export const StyledButtonCategory = styled.button`
   font-weight: 400;
 
   padding: 1.3125rem 1.0625rem;
-  min-width: 17.5rem;
+  min-width: 17rem;
   max-width: 19rem;
 
   color: #fff;
