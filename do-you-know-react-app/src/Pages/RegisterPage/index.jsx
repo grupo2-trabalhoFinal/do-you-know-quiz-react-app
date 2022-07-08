@@ -10,8 +10,11 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useHistory } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../../context/UserContext"
 import api from "../../services/api";
 import { toast } from "react-toastify";
+
 
 const RegisterPage = () => {
   const history = useHistory();
@@ -49,16 +52,17 @@ const RegisterPage = () => {
     resolver: yupResolver(schema),
   });
 
+
   const submitedForm = ({ email, password, name, age }) => {
     const user = { email, password, name, age };
     api
       .post("/register", user)
       .then((response) => {
-        console.log(response);
         toast.success("Conta criada com sucesso");
-        return history.push("/login");
+        return history.push("/successful-register);
       })
       .catch((err) => toast.error("Erro ao criar a conta"));
+
   };
 
   return (

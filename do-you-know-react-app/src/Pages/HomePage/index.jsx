@@ -8,6 +8,7 @@ import { useHistory } from "react-router-dom";
 
 const HomePage = () => {
   const history = useHistory();
+  
   //ONCLICK NOS BUTTONS PARA REDIRECIONAMENTO ATÉ AS PAGINAS DO FORMULÁRIO.
 
   return (
