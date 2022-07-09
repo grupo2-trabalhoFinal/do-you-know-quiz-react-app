@@ -17,7 +17,14 @@ export const HomePageContainer = styled.div`
   background-size: cover;
 
   img {
+    width: 70vw;
     margin-right: 25px;
+  }
+
+  @media (min-width: 1024px) {
+    img {
+      width: 30vw;
+    }
   }
 `;
 
@@ -43,6 +50,10 @@ export const GoToRegisterButton = styled.button`
     border: 3px solid white;
 
     transition: 0.6s ease;
+  }
+
+  @media (min-width: 1024px) {
+    width: 40vw;
   }
 `;
 
