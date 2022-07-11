@@ -29,6 +29,12 @@ export const RegisterContainer = styled.div`
       width: 45vw;
     }
   }
+
+  @media (min-width: 1024px) {
+    img {
+      width: 25vw;
+    }
+  }
 `;
 
 export const RegisterHeader = styled.header`
@@ -65,6 +71,13 @@ export const RegisterHeader = styled.header`
       height: 3.5rem;
       width: 10rem;
       font-size: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    button {
+      width: 8.5rem;
+      height: 3rem;
     }
   }
 `;
@@ -110,6 +123,10 @@ export const RegisterForm = styled.form`
       padding: 0;
     }
   }
+
+  @media (min-width: 1024px) {
+    width: 40vw;
+  }
 `;
 
 export const RegisterButton = styled.button`
@@ -139,6 +156,6 @@ export const RegisterButton = styled.button`
 
   @media (min-width: 800px) {
     width: 60vw;
-    height: 4rem;
+    height: 3.5rem;
   }
 `;

@@ -6,7 +6,7 @@ export const RegisterContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 
   padding: 15px;
 
@@ -16,7 +16,7 @@ export const RegisterContainer = styled.div`
   background-color: #eeeeee;
 
   img {
-    width: 50vw;
+    width: 45vw;
   }
 
   span {
@@ -27,6 +27,12 @@ export const RegisterContainer = styled.div`
   @media (min-width: 500px) {
     img {
       width: 45vw;
+    }
+  }
+
+  @media (min-width: 924px) {
+    img {
+      width: 25vw;
     }
   }
 `;
@@ -67,6 +73,13 @@ export const RegisterHeader = styled.header`
       font-size: 1.5rem;
     }
   }
+
+  @media (min-width: 924px) {
+    button {
+      height: 2.5rem;
+      width: 8rem;
+    }
+  }
 `;
 
 export const RegisterForm = styled.form`
@@ -80,14 +93,13 @@ export const RegisterForm = styled.form`
 
   input {
     width: 100%;
-    height: 2rem;
+    height: 1.5rem;
     padding: 0;
   }
 
   label {
     color: #1e4e9d;
     font-weight: 700;
-    font-size: 1rem;
   }
 
   div {
@@ -95,24 +107,37 @@ export const RegisterForm = styled.form`
     justify-content: center;
 
     width: 100%;
-    margin-top: 25px;
+    margin-top: 20px;
   }
 
   @media (min-width: 750px) {
     label {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
     }
 
     input {
       width: 100%;
-      height: 2rem;
+
       padding: 0;
+    }
+
+    div {
+      margin-top: 15px;
+    }
+  }
+
+  @media (min-width: 900px) {
+    width: 50vw;
+
+    input {
+      height: 1.5rem;
+      font-size: 1.3rem;
     }
   }
 `;
 
 export const RegisterButton = styled.button`
-  height: 3rem;
+  height: 2.5rem;
   width: 80vw;
 
   background-color: #1e4e9d;
@@ -139,5 +164,9 @@ export const RegisterButton = styled.button`
   @media (min-width: 800px) {
     width: 60vw;
     height: 4rem;
+  }
+  @media (min-width: 900px) {
+    height: 3rem;
+    width: 80%;
   }
 `;

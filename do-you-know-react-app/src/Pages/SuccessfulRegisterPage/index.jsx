@@ -8,11 +8,7 @@ const SuccessfulRegisterPage = () => {
 
   return (
     <SuccessfulPageContainer>
-      <img
-        src={checkIcon}
-        alt="Icone de sucesso"
-        style={{ width: "50vw" }}
-      ></img>
+      <img src={checkIcon} alt="Icone de sucesso"></img>
       <h2>CADASTRO EFETUADO COM SUCESSO!</h2>
       <SuccessPageButton onClick={() => history.push("/login")}>
         LOGIN
