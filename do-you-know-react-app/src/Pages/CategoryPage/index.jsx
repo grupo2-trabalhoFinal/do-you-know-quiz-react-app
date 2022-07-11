@@ -1,17 +1,19 @@
 import { useState } from "react";
 import ButtonCategory from "../../components/ButtonCategory";
 import TitleCategory from "../../components/TitleCategory";
+
 import { GlobalContainer } from "../../styles/global";
 import { ContainerListCategory, StyledCategoryPage } from "./style.jsx";
 
 const CategoryPage = () => {
   const [listCategorys, setLisCategorys] = useState([
-    "HTML",
+    "Html",
     "CSS",
-    "JavaScript",
+    "Javascript",
     "React",
     "Api",
   ]);
+
   return (
     <GlobalContainer>
       <StyledCategoryPage>
