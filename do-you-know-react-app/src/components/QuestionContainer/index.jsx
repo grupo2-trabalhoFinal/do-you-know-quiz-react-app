@@ -10,7 +10,12 @@ const QuestionContainer = () => {
     useContext(UserContext);
 
   const [counter, setCounter] = useState(0);
-  changeQuestion(listCategory[counter]);
+
+  counter === 0
+    ? changeQuestion(listCategory[counter])
+    : setTimeout(() => {
+        changeQuestion(listCategory[counter]);
+      }, 1000);
 
   const fowardQuestion = () => {
     counter >= 9 ? setCounter(9) : setCounter(counter + 1);

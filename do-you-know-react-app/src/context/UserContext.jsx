@@ -11,8 +11,8 @@ export const UserProvider = ({ children }) => {
     setUserName(value);
   };
 
-  const changeQuestion = (number) => {
-    setSingleQuestion(number);
+  const changeQuestion = (item) => {
+    setSingleQuestion(item);
   };
 
   return (
