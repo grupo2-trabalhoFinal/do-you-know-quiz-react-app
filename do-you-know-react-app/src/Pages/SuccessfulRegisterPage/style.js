@@ -13,6 +13,7 @@ export const SuccessfulPageContainer = styled.div`
   color: #1e4e9d;
 
   img {
+    width: 50vw;
     margin-left: 20px;
   }
 
@@ -21,6 +22,16 @@ export const SuccessfulPageContainer = styled.div`
     text-align: center;
 
     max-width: 90vw;
+  }
+
+  @media (min-width: 1024px) {
+    img {
+      width: 20vw;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
   }
 `;
 
@@ -46,5 +57,9 @@ export const SuccessPageButton = styled.button`
     border: 3px solid white;
 
     transition: 0.6s ease;
+  }
+
+  @media (min-width: 1024px) {
+    width: 30vw;
   }
 `;

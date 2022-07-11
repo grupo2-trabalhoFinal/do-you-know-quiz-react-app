@@ -15,35 +15,60 @@ export const FirstPageContainer = styled.div`
   background-repeat: no-repeat;
   background-color: #1e4e9d;
   background-size: cover;
-  
-  .person{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    color:white;
-    font-size:2rem;
+
+  .person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
   }
-`
+
+  & > img {
+    width: 35vw;
+  }
+
+  & > div > img {
+    width: 20vw;
+  }
+
+  @media (min-width: 1024px) {
+    img {
+      width: 20vw;
+    }
+
+    div > img {
+      width: 10vw;
+    }
+  }
+`;
 export const ButtonFirstPage = styled.button`
-    height: 6rem;
-    width: 70vw;
+  height: 6rem;
+  width: 70vw;
 
-    background-color: white;
+  background-color: white;
+  color: #1e4e9d;
+
+  border-radius: 20px;
+  border: 1px solid white;
+
+  font-size: 3rem;
+  font-weight: 800;
+
+  transition: 0.4s ease;
+
+  &:hover {
+    background-color: #2af4fe;
     color: #1e4e9d;
+    border-style: none;
 
-    border-radius: 20px;
-    border: 1px solid white;
+    transition: 0.6s ease;
+  }
 
-    font-size: 3rem;
-    font-weight: 800;
+  @media (min-width: 1024px) {
+    height: 3.5rem;
+    width: 45vw;
 
-    transition: 0.4s ease;
-
-    &:hover {
-        background-color: #2af4fe;
-        color: #1e4e9d;
-        border-style:none;
-        
-    
-        transition: 0.6s ease;
-`
+    font-size: 2rem;
+  }
+`;
