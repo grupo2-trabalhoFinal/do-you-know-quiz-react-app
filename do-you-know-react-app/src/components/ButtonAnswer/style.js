@@ -1,7 +1,13 @@
 import styled from "styled-components";
 
 export const StyledAnswerButton = styled.button`
-  background-color: #2257a7;
+  background-color: ${(props) => {
+    if (props.clicked) {
+      return props.isCorrect ? "#22A73F" : "#c76361";
+    } else {
+      return "#2257a7";
+    }
+  }};
   border: none;
 
   color: white;
@@ -9,7 +15,4 @@ export const StyledAnswerButton = styled.button`
 
   border-radius: 50px;
   padding: 14px;
-  &:hover {
-    background-color: #2af4fe;
-  }
 `;

@@ -11,21 +11,28 @@ const QuestionContainer = () => {
 
   const [counter, setCounter] = useState(0);
 
+  const [clicked, setClicked] = useState(false);
+
   counter === 0
     ? changeQuestion(listCategory[counter])
     : setTimeout(() => {
         changeQuestion(listCategory[counter]);
-      }, 1000);
+        setClicked(false);
+      }, 900);
 
   const fowardQuestion = () => {
     counter >= 9 ? setCounter(9) : setCounter(counter + 1);
-
-    changeQuestion(listCategory[counter]);
+    setClicked(!clicked);
   };
 
   return (
     <QuestionContainerStyled>
-      <QuestionCard question={singleQuestion} fowardQuestion={fowardQuestion} />
+      <QuestionCard
+        question={singleQuestion}
+        fowardQuestion={fowardQuestion}
+        clicked={clicked}
+        setClicked={setClicked}
+      />
     </QuestionContainerStyled>
   );
 };
