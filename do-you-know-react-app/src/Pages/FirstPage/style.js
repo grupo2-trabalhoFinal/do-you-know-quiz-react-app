@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import background from "../../Assets/background.svg";
 
-export const HomePageContainer = styled.div`
+export const FirstPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,48 +16,59 @@ export const HomePageContainer = styled.div`
   background-color: #1e4e9d;
   background-size: cover;
 
-  img {
-    width: 70vw;
-    margin-right: 25px;
+  .person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+  }
+
+  & > img {
+    width: 35vw;
+  }
+
+  & > div > img {
+    width: 20vw;
   }
 
   @media (min-width: 1024px) {
     img {
-      width: 30vw;
+      width: 20vw;
+    }
+
+    div > img {
+      width: 10vw;
     }
   }
 `;
-
-export const GoToRegisterButton = styled.button`
-  height: 3.3rem;
+export const ButtonFirstPage = styled.button`
+  height: 6rem;
   width: 70vw;
 
-  background-color: #1e4e9d;
-  color: white;
+  background-color: white;
+  color: #1e4e9d;
 
-  border-radius: 50px;
+  border-radius: 20px;
   border: 1px solid white;
 
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 3rem;
+  font-weight: 800;
 
   transition: 0.4s ease;
 
   &:hover {
     background-color: #2af4fe;
     color: #1e4e9d;
-
-    border: 3px solid white;
+    border-style: none;
 
     transition: 0.6s ease;
   }
 
   @media (min-width: 1024px) {
-    width: 40vw;
-  }
-`;
+    height: 3.5rem;
+    width: 45vw;
 
-export const GoToLoginButton = styled(GoToRegisterButton)`
-  background-color: white;
-  color: #1e4e9d;
+    font-size: 2rem;
+  }
 `;
