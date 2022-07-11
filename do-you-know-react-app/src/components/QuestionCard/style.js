@@ -21,9 +21,4 @@ export const StyledQuestionCard = styled.div`
     border-radius: 50px;
     padding: 2px 14px;
   }
-
-  button:hover {
-  }
-
-  //incluir o botão "sair" depois fora dessa div
 `;

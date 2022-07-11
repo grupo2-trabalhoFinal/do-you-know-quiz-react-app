@@ -1,36 +1,26 @@
+import { useState } from "react";
+import { useContext } from "react";
+import { UserContext } from "../../context/UserContext";
 import { QuestionCard } from "../QuestionCard";
 import { QuestionContainerStyled } from "./style";
 //container é aquele card branco
 
 const QuestionContainer = () => {
-  const teste = [
-    {
-      questionText: "Qual a diferença entre =, == e ===?",
-      answerOptions: [
-        {
-          answerText:
-            "O sinal = representa atribuição, == é comparação e === é comparação estrita",
-          isCorrect: true,
-        },
-        {
-          answerText: "loren ipsum",
-          isCorrect: false,
-        },
-        {
-          answerText: "loren ipsum",
-          isCorrect: false,
-        },
-        {
-          answerText: "loren ipsum",
-          isCorrect: false,
-        },
-      ],
-    },
-  ];
+  const { listCategory, singleQuestion, changeQuestion } =
+    useContext(UserContext);
+
+  const [counter, setCounter] = useState(0);
+  changeQuestion(listCategory[counter]);
+
+  const fowardQuestion = () => {
+    counter >= 9 ? setCounter(9) : setCounter(counter + 1);
+
+    changeQuestion(listCategory[counter]);
+  };
 
   return (
     <QuestionContainerStyled>
-      <QuestionCard questions={teste} />
+      <QuestionCard question={singleQuestion} fowardQuestion={fowardQuestion} />
     </QuestionContainerStyled>
   );
 };

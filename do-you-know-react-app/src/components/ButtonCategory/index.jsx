@@ -18,8 +18,6 @@ const ButtonCategory = ({ children, category }) => {
     history.push("/question");
     return Api;
   }
-
-  console.log(listCategory);
   return (
     <StyledButtonCategory onClick={() => handleClickCategory(category)}>
       {children}
