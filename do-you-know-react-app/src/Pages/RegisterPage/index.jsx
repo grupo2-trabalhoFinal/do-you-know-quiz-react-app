@@ -59,7 +59,7 @@ const RegisterPage = () => {
       .post("/register", user)
       .then((response) => {
         toast.success("Conta criada com sucesso");
-        return history.push("/successful-register);
+        return history.push("/successful-register");
       })
       .catch((err) => toast.error("Erro ao criar a conta"));
 

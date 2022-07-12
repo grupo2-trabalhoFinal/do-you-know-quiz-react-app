@@ -3,20 +3,27 @@ import Logo from '../../Assets/LOGO.svg'
 import Pessoa from '../../Assets/Pessoa.svg'
 import { useContext } from "react"
 import { UserContext } from "../../context/UserContext"
+import { Redirect, useHistory } from "react-router-dom"
+import { TokenContext } from "../../context/TokenContent"
 
-const FirstPage = () =>{
+const FirstPage = ({auth,setAuth}) =>{
 
     const {userName, changeName} = useContext(UserContext)
+    
+    const history = useHistory();
 
-    console.log(userName);
+    if(!auth){
+        history.push("/")
+    }
     return(
+        
         <FirstPageContainer>
             <img src={Logo}   style={{ width: "35vw" }}/>
             <div className = "person">
                 <img src={Pessoa} style={{ width:"20vw" }}/>
                 <span>{userName}</span>
             </div>
-            <ButtonFirstPage onClick={()=>changeName("raquelzinha")}>Jogar</ButtonFirstPage>
+            <ButtonFirstPage onClick={()=>history.push("/category")}>Jogar</ButtonFirstPage>
             <ButtonFirstPage>Ranking</ButtonFirstPage>
         </FirstPageContainer>
     )
