@@ -11,8 +11,8 @@ const HomePage = ({auth,setAuth}) => {
 
   //ONCLICK NOS BUTTONS PARA REDIRECIONAMENTO ATÉ AS PAGINAS DO FORMULÁRIO.
 
-  if(auth){
-    <Redirect to ="/home"/>
+  if (auth) {
+    history.push("/home");
   }
   return (
     <HomePageContainer>
