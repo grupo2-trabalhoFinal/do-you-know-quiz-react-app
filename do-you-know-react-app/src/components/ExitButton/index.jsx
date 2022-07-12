@@ -1,5 +1,12 @@
+import { useHistory } from "react-router-dom";
 import { StyledExitButton } from "./style";
 
 export const ExitButton = () => {
-  return <StyledExitButton>SAIR</StyledExitButton>;
+  const history = useHistory();
+
+  return (
+    <StyledExitButton onClick={() => history.push("/category")}>
+      SAIR
+    </StyledExitButton>
+  );
 };
