@@ -1,21 +1,24 @@
 import { useState } from "react";
-import { Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import ButtonCategory from "../../components/ButtonCategory";
 import TitleCategory from "../../components/TitleCategory";
+
 import { GlobalContainer } from "../../styles/global";
 import { ContainerListCategory, StyledCategoryPage } from "./style.jsx";
 
-const CategoryPage = ({auth,setAuth}) => {
+const CategoryPage = ({ auth, setAuth }) => {
   const [listCategorys, setLisCategorys] = useState([
-    "HTML",
+    "Html",
     "CSS",
-    "JavaScript",
+    "Javascript",
     "React",
     "Api",
   ]);
 
-  if(!auth){
-    <Redirect to = "/"/>
+  const history = useHistory();
+
+  if (!auth) {
+    history.push("/");
   }
   return (
     <GlobalContainer>

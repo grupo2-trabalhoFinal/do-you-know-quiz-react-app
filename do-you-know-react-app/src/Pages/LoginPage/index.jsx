@@ -11,15 +11,14 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useHistory } from "react-router-dom";
 import { useContext } from "react";
-import { UserContext } from "../../context/UserContext"
+import { UserContext } from "../../context/UserContext";
 import api from "../../services/api";
 import { toast } from "react-toastify";
 import { TokenContext } from "../../context/TokenContent";
 
-const LoginPage = ({auth,setAuth}) => {
-
-  const {userName, changeName} = useContext(UserContext)
-  const {token,changeToken} = useContext(TokenContext)
+const LoginPage = ({ auth, setAuth }) => {
+  const { userName, changeName } = useContext(UserContext);
+  const { token, changeToken } = useContext(TokenContext);
   const history = useHistory();
 
   const schema = yup.object().shape({
@@ -38,30 +37,26 @@ const LoginPage = ({auth,setAuth}) => {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm({
     resolver: yupResolver(schema),
   });
 
   const submitedForm = (data) => {
-    
     api
       .post("/login", data)
       .then((response) => {
-        
-        const token  = response.data.accessToken
+        const token = response.data.accessToken;
         changeName(response.data.user.name);
-        console.log("OI")
-        localStorage.setItem("@quizToken", JSON.stringify(token))
+        console.log("OI");
+        localStorage.setItem("@quizToken", JSON.stringify(token));
         setAuth(true);
-        
       })
       .catch((err) => toast.error("Confira os dados e tente novamente"));
-    };
-    
-    if(auth){
-      history.push("/home");
-    }
+  };
+
+  if (auth) {
+    history.push("/home");
+  }
 
   return (
     <RegisterContainer>

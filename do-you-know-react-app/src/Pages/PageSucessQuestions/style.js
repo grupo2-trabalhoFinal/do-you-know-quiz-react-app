@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SuccessfulPageContainer = styled.div`
+export const StyledSucessQuestionsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +23,9 @@ export const SuccessfulPageContainer = styled.div`
 
     max-width: 90vw;
   }
+  h3 {
+    font-size: 2rem;
+  }
 
   @media (min-width: 1024px) {
     img {
@@ -35,7 +38,7 @@ export const SuccessfulPageContainer = styled.div`
   }
 `;
 
-export const SuccessPageButton = styled.button`
+export const StyledBackButton = styled.button`
   height: 3rem;
   width: 80vw;
 

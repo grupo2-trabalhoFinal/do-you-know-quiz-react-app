@@ -8,7 +8,7 @@ import { Redirect, useHistory } from "react-router-dom";
 
 const HomePage = ({auth,setAuth}) => {
   const history = useHistory();
-  
+
   //ONCLICK NOS BUTTONS PARA REDIRECIONAMENTO ATÉ AS PAGINAS DO FORMULÁRIO.
 
   if(auth){
@@ -16,7 +16,7 @@ const HomePage = ({auth,setAuth}) => {
   }
   return (
     <HomePageContainer>
-      <img src={Logo} alt="Logo" style={{ width: "70vw" }} />
+      <img src={Logo} alt="Logo" />
       <GoToRegisterButton onClick={() => history.push("/register")}>
         CADASTRO
       </GoToRegisterButton>

@@ -11,10 +11,9 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useHistory } from "react-router-dom";
 import { useContext } from "react";
-import { UserContext } from "../../context/UserContext"
+import { UserContext } from "../../context/UserContext";
 import api from "../../services/api";
 import { toast } from "react-toastify";
-
 
 const RegisterPage = () => {
   const history = useHistory();
@@ -47,11 +46,9 @@ const RegisterPage = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm({
     resolver: yupResolver(schema),
   });
-
 
   const submitedForm = ({ email, password, name, age }) => {
     const user = { email, password, name, age };
@@ -62,7 +59,6 @@ const RegisterPage = () => {
         return history.push("/successful-register");
       })
       .catch((err) => toast.error("Erro ao criar a conta"));
-
   };
 
   return (
@@ -94,7 +90,7 @@ const RegisterPage = () => {
 
         <label>
           IDADE
-          {errors.ConfirmPassword && <span>- {errors.age.message}</span>}
+          {errors.age && <span>- {errors.age.message}</span>}
         </label>
         <InputExample
           name="age"
