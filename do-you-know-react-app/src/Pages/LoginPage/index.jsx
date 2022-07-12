@@ -51,7 +51,7 @@ const LoginPage = ({auth,setAuth}) => {
         
         const token  = response.data.accessToken
         changeName(response.data.user.name);
-        console.log("OI")
+        localStorage.setItem("@userName", JSON.stringify(response.data.user.name));
         localStorage.setItem("@quizToken", JSON.stringify(token))
         setAuth(true);
         
