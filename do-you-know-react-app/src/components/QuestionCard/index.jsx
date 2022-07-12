@@ -8,18 +8,33 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
   console.log(pointsRanking);
 
   useEffect(() => {
-    api.get("/users").then((response) => console.log(response.data.users));
+    const userId = localStorage.getItem("@quizId");
+    const userToken = localStorage.getItem("@quizToken");
+    const data = { points: pointsRanking };
+    api
+      .patch(`/users/${userId}`, data, {
+        headers: {
+          Authorization: `Bearer ${userToken}`,
+        },
+      })
+      .then((res) => console.log(res));
   }, [pointsRanking]);
 
   function successfulAnswer(points) {
     setPointsRanking(pointsRanking + points);
-
-    console.log("vapo");
   }
 
   function wrongAnswer(points) {
-    setPointsRanking(pointsRanking - points);
-    console.log(pointsRanking);
+    const userId = localStorage.getItem("@quizId");
+    const userToken = localStorage.getItem("@quizToken");
+    const data = { points: pointsRanking };
+    api
+      .patch(`/users/${userId}`, data, {
+        headers: {
+          Authorization: `Bearer ${userToken}`,
+        },
+      })
+      .then(() => setPointsRanking(pointsRanking - points));
   }
 
   return (
