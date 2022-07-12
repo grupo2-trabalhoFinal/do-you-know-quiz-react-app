@@ -1,7 +1,7 @@
 import { Switch, Route } from "react-router-dom";
 import CategoryPage from "../Pages/CategoryPage";
 import HomePage from "../Pages/HomePage";
-import FirstPage from "../Pages/FirstPage"
+import FirstPage from "../Pages/FirstPage";
 import LoginPage from "../Pages/LoginPage";
 import PreQuestion from "../Pages/PreQuestion";
 import QuestionPage from "../Pages/QuestionPage";
@@ -13,7 +13,7 @@ function Routes() {
   return (
     <Switch>
       <Route exact path="/">
-        <HomePage/>
+        <HomePage />
       </Route>
       <Route exact path="/register">
         <RegisterPage />
@@ -25,7 +25,7 @@ function Routes() {
         <SuccessfulRegisterPage />
       </Route>
       <Route exact path="/home">
-        <FirstPage></FirstPage>
+        <FirstPage />
       </Route>
       <Route exact path="/prequestion">
         <PreQuestion />

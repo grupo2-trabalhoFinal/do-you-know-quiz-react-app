@@ -43,7 +43,7 @@ const LoginPage = () => {
         const { accessToken } = response.data;
         localStorage.setItem("@quizToken", JSON.stringify(accessToken));
 
-        return history.push("/");
+        return history.push("/category");
       })
       .catch((err) => toast.error("Confira os dados e tente novamente"));
   };
