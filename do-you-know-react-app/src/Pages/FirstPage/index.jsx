@@ -7,7 +7,7 @@ import { Redirect, useHistory } from "react-router-dom";
 import { TokenContext } from "../../context/TokenContent";
 
 const FirstPage = ({ auth, setAuth }) => {
-  const { userName, changeName } = useContext(UserContext);
+  const userName = JSON.parse(localStorage.getItem("@userName"));
 
   const history = useHistory();
 
