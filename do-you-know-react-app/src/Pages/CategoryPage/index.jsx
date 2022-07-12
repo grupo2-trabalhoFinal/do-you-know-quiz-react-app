@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import ButtonCategory from "../../components/ButtonCategory";
 import TitleCategory from "../../components/TitleCategory";
 import { GlobalContainer } from "../../styles/global";
@@ -14,8 +14,10 @@ const CategoryPage = ({auth,setAuth}) => {
     "Api",
   ]);
 
+  const history = useHistory();
+
   if(!auth){
-    <Redirect to = "/"/>
+      history.push("/")
   }
   return (
     <GlobalContainer>
