@@ -8,6 +8,7 @@ import QuestionPage from "../Pages/QuestionPage";
 import RegisterPage from "../Pages/RegisterPage";
 
 import SuccessfulRegisterPage from "../Pages/SuccessfulRegisterPage";
+import PageSucessQuestions from "../Pages/PageSucessQuestions";
 
 function Routes() {
   return (
@@ -35,6 +36,10 @@ function Routes() {
       </Route>
       <Route exact path="/category">
         <CategoryPage />
+      </Route>
+
+      <Route exact path="/sucessful-questions">
+        <PageSucessQuestions />
       </Route>
     </Switch>
   );
