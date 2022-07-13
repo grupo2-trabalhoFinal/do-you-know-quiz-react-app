@@ -3,14 +3,16 @@ import {
   StyledContainerItem,
   StyledContainerList,
 } from "./style";
+
 import Logo from "../../Assets/LOGO.svg";
 import "./style.js";
-import RankingOnline from "../../components/RankingOnline";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
+
 import Pessoa from "../../Assets/Pessoa.svg";
 import { StyledContainerPerson } from "../../components/ButtonBack/style";
 import { useHistory } from "react-router-dom";
+
 const RankingPage = () => {
   const history = useHistory();
   function startRanking() {
@@ -37,6 +39,7 @@ const RankingPage = () => {
   useEffect(() => {
     startRanking();
   }, [pointsRanking]);
+
   return (
     <StyledContainerList>
       <img src={Logo} alt="Logo da página"></img>
@@ -59,12 +62,3 @@ const RankingPage = () => {
   );
 };
 export default RankingPage;
-//   function compare(a, b) {
-//     if (a < b) {
-//       return -1;
-//     }
-//     if (a > b) {
-//       return 1;
-//     }
-//     return 0;
-//   }
