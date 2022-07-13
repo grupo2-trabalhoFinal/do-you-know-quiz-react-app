@@ -38,7 +38,7 @@
 
 ### Do-you-know-quiz screens :
 
-<h3> Home screen </h3>
+<h3> Home screen : </h3>
 <br>
 
 <div>
@@ -50,7 +50,7 @@
 
 <br>
 
-<h3> Quiz screen </h3>
+<h3> Quiz screen : </h3>
 
 <br>
 
