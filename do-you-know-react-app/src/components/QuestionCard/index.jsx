@@ -13,7 +13,6 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
     return coutinho;
   }
   const [pointsRanking, setPointsRanking] = useState(neymar);
-  console.log(pointsRanking);
 
   useEffect(() => {
     const userId = localStorage.getItem("@quizId");
