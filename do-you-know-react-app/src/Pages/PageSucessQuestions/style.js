@@ -12,6 +12,10 @@ export const StyledSucessQuestionsContainer = styled.div`
   background-color: #eeeeee;
   color: #1e4e9d;
 
+  button {
+    height: auto;
+  }
+
   img {
     width: 50vw;
     margin-left: 20px;
