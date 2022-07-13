@@ -38,9 +38,11 @@
 
 ### Do-you-know-quiz screens :
 
+* Home screen
+
 <div>
-  <img align="center" <a href="https://imgur.com/8TbbHPO"><img height="500" width="250" src="https://i.imgur.com/8TbbHPO.jpg" title="source: imgur.com" /></a>
-  <img align="center" <a href="https://imgur.com/G2pQSRJ"><img height="500" width="250" src="https://i.imgur.com/G2pQSRJ.jpg" title="source: imgur.com" /></a>
+  <img align="center" <a href="https://imgur.com/8TbbHPO"><img height="600" width="270" src="https://i.imgur.com/8TbbHPO.jpg" title="source: imgur.com" /></a>
+  <img align="center" <a href="https://imgur.com/G2pQSRJ"><img height="600" width="270" src="https://i.imgur.com/G2pQSRJ.jpg" title="source: imgur.com" /></a>
   
   
 </div>
