@@ -1,4 +1,4 @@
-<h1 style="font-weight: 600"> Hello, we are students at Kenzie Academy 🧑‍💻 </h1>
+<h1 style="font-weight: 600" align="center"> Hello, we are students at Kenzie Academy 🧑‍💻 </h1>
 <br>
 <br>
 
