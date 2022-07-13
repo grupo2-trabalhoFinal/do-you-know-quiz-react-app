@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const StyledExitButton = styled.button`
-  width: 33%;
+  width: 30%;
   background-color: white;
-  padding: 2% 1%;
+  padding: 1%;
 
   border: none;
   border-radius: 50px;

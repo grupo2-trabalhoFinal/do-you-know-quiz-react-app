@@ -1,7 +1,6 @@
 import { RegisterContainer } from "./style";
 import Logo from "../../Assets/LOGO.svg";
 import "./style.js";
-import RankingOnline from "../../components/RankingOnline";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 
@@ -10,7 +9,6 @@ const RankingPage = () => {
     api.get("/users").then((res) => setRanking(res.data));
   }
   const [ranking, setRanking] = useState([]);
-  console.log(ranking);
 
   const newRanking = ranking.sort(function (a, b) {
     if (a.points > b.points) {
@@ -29,7 +27,6 @@ const RankingPage = () => {
     return coutinho;
   }
   const [pointsRanking, setPointsRanking] = useState(neymar);
-  console.log(pointsRanking);
 
   useEffect(() => {
     startRanking();
@@ -52,13 +49,3 @@ const RankingPage = () => {
 };
 
 export default RankingPage;
-
-//   function compare(a, b) {
-//     if (a < b) {
-//       return -1;
-//     }
-//     if (a > b) {
-//       return 1;
-//     }
-//     return 0;
-//   }

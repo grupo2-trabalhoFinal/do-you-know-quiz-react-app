@@ -10,12 +10,6 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
   const [quizCounter, setQuizCounter] = useState(10);
   const [myTimeout, setMyTimeout] = useState(0);
 
-  /*const myInterval = setInterval(() => {
-    setQuizCounter(quizCounter - 1);
-  }, 3500);*/
-
-  console.log(quizCounter);
-
   useEffect(() => {
     if (quizCounter > 0) {
       const countTimeout = setTimeout(() => {
@@ -55,7 +49,7 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
 
   useEffect(() => {
     const userId = localStorage.getItem("@quizId");
-    const userToken = localStorage.getItem("@quizToken");
+    const userToken = JSON.parse(localStorage.getItem("@quizToken"));
     const data = { points: pointsRanking };
     api.patch(`/users/${userId}`, data, {
       headers: {
@@ -71,7 +65,7 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
 
   function wrongAnswer(points) {
     const userId = localStorage.getItem("@quizId");
-    const userToken = localStorage.getItem("@quizToken");
+    const userToken = JSON.parse(localStorage.getItem("@quizToken"));
     const data = { points: pointsRanking };
     api
       .patch(`/users/${userId}`, data, {
@@ -91,7 +85,6 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
   }, [question]);
 
   function shuffleArray(arr) {
-    console.log(arr);
     for (let i = question.answerOptions.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [arr[i], arr[j]] = [arr[j], arr[i]];

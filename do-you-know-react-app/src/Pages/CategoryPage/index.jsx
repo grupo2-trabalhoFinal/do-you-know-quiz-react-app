@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import ButtonBack from "../../components/ButtonBack";
@@ -8,7 +7,7 @@ import TitleCategory from "../../components/TitleCategory";
 import { GlobalContainer } from "../../styles/global";
 import { ContainerListCategory, StyledCategoryPage } from "./style.jsx";
 
-const CategoryPage = ({ auth, setAuth }) => {
+const CategoryPage = ({ auth }) => {
   const [listCategorys, setLisCategorys] = useState([
     "Html",
     "CSS",
@@ -22,6 +21,7 @@ const CategoryPage = ({ auth, setAuth }) => {
   if (!auth) {
     history.push("/");
   }
+
   return (
     <GlobalContainer>
       <StyledCategoryPage>

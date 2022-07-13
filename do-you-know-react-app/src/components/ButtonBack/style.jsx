@@ -10,7 +10,7 @@ export const StyledButtonBack = styled.button`
 
   text-align: center;
   padding: 0.5rem 2.6875rem;
-  margin-top: 5rem;
+  margin-top: 1rem;
 
   border: none;
   border-radius: 0.875rem;

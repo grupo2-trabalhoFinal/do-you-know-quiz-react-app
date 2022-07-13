@@ -4,10 +4,9 @@ import { useHistory } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 import { QuestionCard } from "../QuestionCard";
 import { QuestionContainerStyled } from "./style";
-//container é aquele card branco
 
 const QuestionContainer = () => {
-  const { listCategory, singleQuestion, changeQuestion, setCountQuestion } =
+  const { listCategory, singleQuestion, changeQuestion } =
     useContext(UserContext);
 
   const history = useHistory();
@@ -25,13 +24,11 @@ const QuestionContainer = () => {
 
   const fowardQuestion = () => {
     if (counter >= 9) {
-      console.log("aqui");
       history.push("/sucessful-questions");
       setCounter(9);
     } else {
       setCounter(counter + 1);
     }
-    // counter >= 9 ? setCounter(9) : setCounter(counter + 1);
     setClicked(!clicked);
   };
 

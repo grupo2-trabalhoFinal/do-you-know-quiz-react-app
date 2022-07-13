@@ -8,7 +8,6 @@ const PageSucessQuestions = () => {
   const history = useHistory();
 
   const { countQuestion, setCountQuestion } = useContext(UserContext);
-  console.log(countQuestion);
 
   return (
     <StyledSucessQuestionsContainer>

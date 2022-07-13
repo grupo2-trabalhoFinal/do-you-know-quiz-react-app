@@ -66,8 +66,8 @@ export const ButtonFirstPage = styled.button`
   }
 
   @media (min-width: 1024px) {
-    height: 3.5rem;
-    width: 45vw;
+    height: 3rem;
+    width: 35vw;
 
     font-size: 2rem;
   }

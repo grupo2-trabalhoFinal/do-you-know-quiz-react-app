@@ -12,8 +12,7 @@ const ButtonCategory = ({ children, category }) => {
     setListCategory([]);
     const Api = await api
       .get(`/questions?category=${category}`)
-      .then((res) => setListCategory([...res.data]))
-      .catch((error) => console.log(error));
+      .then((res) => setListCategory([...res.data]));
 
     history.push("/question");
     return Api;
