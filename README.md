@@ -23,7 +23,7 @@
 
 <br>
 
-It becomes another auxiliary tool, aiming to be linked according to your level of study.
+It becomes another auxiliary tool, aiming to be linked according to your level of study. Confirm and fix the knowledge already acquired during the study time on the knowledge already covered, Html, Css, Javascript, React and Api.
 
 
 ### Technologies used :
