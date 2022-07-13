@@ -14,6 +14,7 @@ import { useContext } from "react";
 import { UserContext } from "../../context/UserContext";
 import api from "../../services/api";
 import { toast } from "react-toastify";
+import "./style.css";
 
 const RegisterPage = () => {
   const history = useHistory();
@@ -50,11 +51,12 @@ const RegisterPage = () => {
     resolver: yupResolver(schema),
   });
 
-  const submitedForm = ({ email, password, name, age }) => {
-    const user = { email, password, name, age };
+  const submitedForm = ({ email, password, name, age, points }) => {
+    const user = { email, password, name, age, points: 0 };
     api
       .post("/register", user)
       .then((response) => {
+        console.log(user);
         toast.success("Conta criada com sucesso");
         return history.push("/successful-register");
       })
@@ -120,6 +122,12 @@ const RegisterPage = () => {
           register={register}
           placeholder="************"
           type="password"
+        ></InputExample>
+
+        <InputExample
+          className="none"
+          name="points"
+          register={register}
         ></InputExample>
 
         <div>

@@ -40,10 +40,13 @@ const LoginPage = () => {
     api
       .post("/login", data)
       .then((response) => {
+        console.log(response);
         const { accessToken } = response.data;
-        localStorage.setItem("@quizToken", JSON.stringify(accessToken));
+        const id = response.data.user.id;
+        localStorage.setItem("@quizToken", accessToken);
+        localStorage.setItem("@quizId", JSON.stringify(id));
 
-        return history.push("/");
+        return history.push("/category");
       })
       .catch((err) => toast.error("Confira os dados e tente novamente"));
   };
