@@ -12,6 +12,7 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
       .then((res) => setPointsRanking(res.data.points));
     return coutinho;
   }
+
   const [pointsRanking, setPointsRanking] = useState(neymar);
   console.log(pointsRanking);
 
@@ -19,13 +20,11 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
     const userId = localStorage.getItem("@quizId");
     const userToken = localStorage.getItem("@quizToken");
     const data = { points: pointsRanking };
-    api
-      .patch(`/users/${userId}`, data, {
-        headers: {
-          Authorization: `Bearer ${userToken}`,
-        },
-      })
-      .then((res) => console.log(res));
+    api.patch(`/users/${userId}`, data, {
+      headers: {
+        Authorization: `Bearer ${userToken}`,
+      },
+    });
   }, [pointsRanking]);
 
   function successfulAnswer(points) {
