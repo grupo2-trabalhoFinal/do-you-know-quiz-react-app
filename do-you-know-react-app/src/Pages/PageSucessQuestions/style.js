@@ -26,6 +26,10 @@ export const StyledSucessQuestionsContainer = styled.div`
   h3 {
     font-size: 2rem;
   }
+  div {
+    display: flex;
+    flex-direction: column;
+  }
 
   @media (min-width: 1024px) {
     img {

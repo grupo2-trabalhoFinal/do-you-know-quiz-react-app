@@ -1,10 +1,14 @@
+import { useContext } from "react";
 import { useEffect, useState } from "react";
+import { UserContext } from "../../context/UserContext";
 import api from "../../services/api";
 import { StyledAnswerButton } from "../ButtonAnswer/style";
 import { StyledQuestionCard } from "./style";
 
 export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
   const userId = localStorage.getItem("@quizId");
+
+  const { countQuestion, setCountQuestion } = useContext(UserContext);
 
   async function neymar() {
     const coutinho = await api
@@ -28,6 +32,7 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
   }, [pointsRanking]);
 
   function successfulAnswer(points) {
+    setCountQuestion(countQuestion + 1);
     setPointsRanking(pointsRanking + points);
   }
 

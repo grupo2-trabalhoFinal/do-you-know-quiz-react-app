@@ -6,6 +6,7 @@ export const UserProvider = ({ children }) => {
   const [userName, setUserName] = useState("Raquel amor da minha ");
   const [listCategory, setListCategory] = useState([]);
   const [singleQuestion, setSingleQuestion] = useState({});
+  const [countQuestion, setCountQuestion] = useState(0);
 
   const changeName = (value) => {
     setUserName(value);
@@ -25,6 +26,8 @@ export const UserProvider = ({ children }) => {
         singleQuestion,
         setSingleQuestion,
         changeQuestion,
+        countQuestion,
+        setCountQuestion,
       }}
     >
       {children}
