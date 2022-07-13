@@ -5,6 +5,7 @@ export const UserContext = createContext({});
 export const UserProvider = ({ children }) => {
   const [listCategory, setListCategory] = useState([]);
   const [singleQuestion, setSingleQuestion] = useState({});
+  const [countQuestion, setCountQuestion] = useState(0);
 
   const [userName, setUserName] = useState("");
   const changeName = (value) => {
@@ -25,6 +26,8 @@ export const UserProvider = ({ children }) => {
         singleQuestion,
         setSingleQuestion,
         changeQuestion,
+        countQuestion,
+        setCountQuestion,
       }}
     >
       {children}
