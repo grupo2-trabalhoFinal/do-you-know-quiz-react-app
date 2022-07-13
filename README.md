@@ -32,7 +32,7 @@
 
 <br>
 
-[Project Link](https://github.com/duribeiro/duribeiro/edit/main/README.md)
+[Project Link](https://....com.br)
 
 <br>
 
