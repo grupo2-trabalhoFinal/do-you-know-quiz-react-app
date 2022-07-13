@@ -43,7 +43,8 @@
 <div>
   <a href="https://imgur.com/8TbbHPO"><img align="center" height="600" width="320" src="https://i.imgur.com/8TbbHPO.jpg" title="source: imgur.com" /></a>
   <a href="https://imgur.com/G2pQSRJ"><img align="center" height="600" width="320" src="https://i.imgur.com/G2pQSRJ.jpg" title="source: imgur.com" /></a>
-  <a href="https://imgur.com/YzGebDY"><img align="center" src="https://i.imgur.com/YzGebDY.jpg" title="source: imgur.com" /></a>
+  <a href="https://imgur.com/YzGebDY"><img align="center" height="600" width="320" src="https://i.imgur.com/YzGebDY.jpg" title="source: imgur.com" /></a>
+  <a href="https://imgur.com/WY50tAE"><img align="center" height="600" width="320" src="https://i.imgur.com/WY50tAE.jpg" title="source: imgur.com" /></a>
   
   
   
