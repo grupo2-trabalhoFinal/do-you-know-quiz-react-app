@@ -9,6 +9,8 @@ import RegisterPage from "../Pages/RegisterPage";
 
 import SuccessfulRegisterPage from "../Pages/SuccessfulRegisterPage";
 import PageSucessQuestions from "../Pages/PageSucessQuestions";
+import RankingOnline from "../components/RankingOnline";
+import RankingPage from "../Pages/Ranking page";
 
 function Routes() {
   return (
@@ -27,6 +29,9 @@ function Routes() {
       </Route>
       <Route exact path="/home">
         <FirstPage />
+      </Route>
+      <Route exact path="/ranking">
+        <RankingPage />
       </Route>
       <Route exact path="/prequestion">
         <PreQuestion />
