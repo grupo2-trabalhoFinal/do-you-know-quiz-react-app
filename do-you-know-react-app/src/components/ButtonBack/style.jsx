@@ -4,7 +4,7 @@ export const StyledButtonBack = styled.button`
   min-width: 17rem;
   max-width: 18rem;
 
-  font-size: 1.1875rem;
+  font-size: ${(props) => props.fontSizeText || "1.1875rem"};
   font-weight: 300;
   line-height: 1.75rem;
 
