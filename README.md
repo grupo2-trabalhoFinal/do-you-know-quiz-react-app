@@ -11,7 +11,7 @@
 <br>
 
 * [Macson soares rocha](https://github.com/maxdevsr)
-* [Nathan Theófilo Araûjo Molina]([Natentado](https://github.com/Natentado))
+* [Nathan Theófilo Araûjo Molina](https://github.com/Natentado)
 * [Izaque Rolim Canavarro](https://github.com/Rolinzinho48)
 * [Rodolfo Lara Cassaro](https://github.com/rodolfolara)
 * [Thays de Lima Silva](https://github.com/limasthays)
