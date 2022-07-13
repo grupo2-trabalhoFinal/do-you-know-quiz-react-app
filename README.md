@@ -39,6 +39,6 @@
 ### Do-you-know-quiz screens :
 
 <div>
-  <img align="center" alt="nodejs" <a href="https://imgur.com/G2pQSRJ"><img src="https://i.imgur.com/G2pQSRJ.jpg" title="source: imgur.com" /></a> />
+  <img align="center" <a href="https://imgur.com/G2pQSRJ"><img src="https://i.imgur.com/G2pQSRJ.jpg" title="source: imgur.com" /></a> />
   
 </div>
