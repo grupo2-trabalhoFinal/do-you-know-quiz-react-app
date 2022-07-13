@@ -19,7 +19,6 @@ const RankingPage = () => {
     api.get("/users").then((res) => setRanking(res.data));
   }
   const [ranking, setRanking] = useState([]);
-  console.log(ranking);
   const newRanking = ranking.sort(function (a, b) {
     if (a.points > b.points) {
       return -1;
@@ -35,7 +34,6 @@ const RankingPage = () => {
     return coutinho;
   }
   const [pointsRanking, setPointsRanking] = useState(neymar);
-  console.log(pointsRanking);
   useEffect(() => {
     startRanking();
   }, [pointsRanking]);

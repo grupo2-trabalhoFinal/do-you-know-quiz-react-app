@@ -52,8 +52,6 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
     const userToken = JSON.parse(localStorage.getItem("@quizToken"));
 
     const data = { points: pointsRanking };
-    console.log(pointsRanking);
-    console.log(data);
     api
       .patch(`/users/${userId}`, data, {
         headers: {

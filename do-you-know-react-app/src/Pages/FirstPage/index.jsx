@@ -8,7 +8,6 @@ const FirstPage = ({ auth, setAuth }) => {
   const userName = JSON.parse(localStorage.getItem("@userName"));
 
   const history = useHistory();
-  console.log(setAuth);
 
   if (auth === false) {
     return <Redirect to="/" />;
