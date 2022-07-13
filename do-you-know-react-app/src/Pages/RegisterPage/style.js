@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const RegisterContainer = styled.div`
+export const RegisterContainer = styled.div `
   box-sizing: border-box;
 
   display: flex;
@@ -37,7 +37,7 @@ export const RegisterContainer = styled.div`
   }
 `;
 
-export const RegisterHeader = styled.header`
+export const RegisterHeader = styled.header `
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -82,7 +82,7 @@ export const RegisterHeader = styled.header`
   }
 `;
 
-export const RegisterForm = styled.form`
+export const RegisterForm = styled.form `
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,7 +136,7 @@ export const RegisterForm = styled.form`
   }
 `;
 
-export const RegisterButton = styled.button`
+export const RegisterButton = styled.button `
   height: 2.5rem;
   width: 80vw;
 

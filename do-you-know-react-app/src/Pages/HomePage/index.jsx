@@ -4,10 +4,17 @@ import {
   HomePageContainer,
 } from "./style";
 import Logo from "../../Assets/LOGO.svg";
-import { useHistory } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 
-const HomePage = () => {
+const HomePage = ({auth,setAuth}) => {
   const history = useHistory();
+
+
+  //ONCLICK NOS BUTTONS PARA REDIRECIONAMENTO ATÉ AS PAGINAS DO FORMULÁRIO.
+
+  if (auth) {
+    history.push("/home");
+  }
 
   return (
     <HomePageContainer>
