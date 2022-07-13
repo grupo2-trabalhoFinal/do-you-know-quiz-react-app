@@ -40,6 +40,7 @@
 
 <h3> Home screen : </h3>
 <br>
+<br>
 
 <div>
   <a href="https://imgur.com/8TbbHPO"><img align="center" height="600" width="330" src="https://i.imgur.com/8TbbHPO.jpg" title="source: imgur.com" /></a>
@@ -52,6 +53,7 @@
 
 <h3> Quiz screen : </h3>
 
+<br>
 <br>
 
 <div>
