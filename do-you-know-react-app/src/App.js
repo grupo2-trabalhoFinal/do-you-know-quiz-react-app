@@ -1,4 +1,3 @@
-import Counter from "./components/Counter";
 import Routes from "./Routes";
 import { GlobalStyle } from "./styles/global";
 

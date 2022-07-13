@@ -10,10 +10,6 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
   const [quizCounter, setQuizCounter] = useState(10);
   const [myTimeout, setMyTimeout] = useState(0);
 
-  /*const myInterval = setInterval(() => {
-    setQuizCounter(quizCounter - 1);
-  }, 3500);*/
-
   useEffect(() => {
     if (quizCounter > 0) {
       const countTimeout = setTimeout(() => {
@@ -54,7 +50,7 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
   useEffect(() => {
     const userId = localStorage.getItem("@quizId");
     const userToken = JSON.parse(localStorage.getItem("@quizToken"));
-    console.log(userToken);
+
     const data = { points: pointsRanking };
     console.log(pointsRanking);
     console.log(data);

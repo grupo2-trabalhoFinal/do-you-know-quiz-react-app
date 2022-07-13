@@ -10,8 +10,6 @@ import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useHistory } from "react-router-dom";
-import { useContext } from "react";
-import { UserContext } from "../../context/UserContext";
 import api from "../../services/api";
 import { toast } from "react-toastify";
 import "./style.css";
@@ -56,7 +54,6 @@ const RegisterPage = () => {
     api
       .post("/register", user)
       .then((response) => {
-        console.log(user);
         toast.success("Conta criada com sucesso");
         return history.push("/successful-register");
       })

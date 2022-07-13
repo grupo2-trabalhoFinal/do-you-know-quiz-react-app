@@ -8,20 +8,16 @@ import "./style.js";
 import RankingOnline from "../../components/RankingOnline";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
-
 import Pessoa from "../../Assets/Pessoa.svg";
 import { StyledContainerPerson } from "../../components/ButtonBack/style";
 import { useHistory } from "react-router-dom";
-
 const RankingPage = () => {
   const history = useHistory();
-
   function startRanking() {
     api.get("/users").then((res) => setRanking(res.data));
   }
   const [ranking, setRanking] = useState([]);
   console.log(ranking);
-
   const newRanking = ranking.sort(function (a, b) {
     if (a.points > b.points) {
       return -1;
@@ -29,9 +25,7 @@ const RankingPage = () => {
       return true;
     }
   });
-
   const userId = localStorage.getItem("@quizId");
-
   async function neymar() {
     const coutinho = await api
       .get(`/users/${userId}`)
@@ -40,11 +34,9 @@ const RankingPage = () => {
   }
   const [pointsRanking, setPointsRanking] = useState(neymar);
   console.log(pointsRanking);
-
   useEffect(() => {
     startRanking();
   }, [pointsRanking]);
-
   return (
     <StyledContainerList>
       <img src={Logo} alt="Logo da página"></img>
@@ -56,7 +48,6 @@ const RankingPage = () => {
                 <img src={Pessoa} alt="people" />
                 <h2>{user.name}</h2>
               </StyledContainerPerson>
-
               <h3>{user.points} pontos</h3>
             </li>
             <p>#{index}</p>
@@ -67,9 +58,7 @@ const RankingPage = () => {
     </StyledContainerList>
   );
 };
-
 export default RankingPage;
-
 //   function compare(a, b) {
 //     if (a < b) {
 //       return -1;

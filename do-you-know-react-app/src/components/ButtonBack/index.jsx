@@ -1,6 +1,7 @@
 import { StyledButtonBack } from "./style";
 
 const ButtonBack = ({
+  setAuth,
   route,
   text,
   backgroundColorButton,
@@ -8,11 +9,9 @@ const ButtonBack = ({
   fontSizeText,
   exit,
 }) => {
-  const handleButton = (route) => {
-    // history.push(`${route}`);
-    if (exit) {
-      localStorage.clear();
-    }
+  const handleButton = () => {
+    localStorage.clear();
+    setAuth(false);
   };
 
   return (
@@ -20,7 +19,7 @@ const ButtonBack = ({
       backgroundColorButton={`${backgroundColorButton}`}
       color={`${color}`}
       fontSizeText={`${fontSizeText}`}
-      onClick={() => handleButton(route)}
+      onClick={() => handleButton()}
     >
       {text}
     </StyledButtonBack>
