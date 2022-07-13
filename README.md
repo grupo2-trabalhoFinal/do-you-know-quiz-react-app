@@ -13,7 +13,7 @@
 * [Macson soares rocha](https://github.com/maxdevsr)
 * [Nathan Theófilo Araûjo Molina](https://github.com/Natentado)
 * [Izaque Rolim Canavarro](https://github.com/Rolinzinho48)
-* [Rodolfo Lara Cassaro](https://github.com/rodolfolara)
+* [Rodolfo Lara Cassaro](https://github.com/rodolfolarac)
 * [Thays de Lima Silva](https://github.com/limasthays)
 * [Ramon souza dos santos](https://github.com/nordicr1)
 
