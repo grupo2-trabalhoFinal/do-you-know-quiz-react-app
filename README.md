@@ -11,10 +11,10 @@
 <br>
 
 * [Macson soares rocha](https://github.com/maxdevsr)
-* Nathan Theófilo Araûjo Molina
-* Izaque Rolim Canavarro
-* Rodolfo Lara Cassaro
-* Thays de Lima Silva
+* [Nathan Theófilo Araûjo Molina]([Natentado](https://github.com/Natentado))
+* [Izaque Rolim Canavarro](https://github.com/Rolinzinho48)
+* [Rodolfo Lara Cassaro](https://github.com/rodolfolara)
+* [Thays de Lima Silva](https://github.com/limasthays)
 * [Ramon souza dos santos](https://github.com/nordicr1)
 
 <br>
