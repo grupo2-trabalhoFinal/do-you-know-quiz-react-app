@@ -50,12 +50,18 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
   useEffect(() => {
     const userId = localStorage.getItem("@quizId");
     const userToken = JSON.parse(localStorage.getItem("@quizToken"));
+
     const data = { points: pointsRanking };
-    api.patch(`/users/${userId}`, data, {
-      headers: {
-        Authorization: `Bearer ${userToken}`,
-      },
-    });
+    console.log(pointsRanking);
+    console.log(data);
+    api
+      .patch(`/users/${userId}`, data, {
+        headers: {
+          Authorization: `Bearer ${userToken}`,
+        },
+      })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   }, [pointsRanking]);
 
   function successfulAnswer(points) {
