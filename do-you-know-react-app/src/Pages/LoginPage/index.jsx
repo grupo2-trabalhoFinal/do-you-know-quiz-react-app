@@ -45,6 +45,7 @@ const LoginPage = ({ auth, setAuth }) => {
     api
       .post("/login", data)
       .then((response) => {
+
         const token = response.data.accessToken;
         changeName(response.data.user.name);
         localStorage.setItem(
@@ -53,6 +54,13 @@ const LoginPage = ({ auth, setAuth }) => {
         );
         localStorage.setItem("@quizToken", JSON.stringify(token));
         setAuth(true);
+
+        console.log(response);
+        const id = response.data.user.id;
+        localStorage.setItem("@quizId", JSON.stringify(id));
+
+        return history.push("/category");
+
       })
       .catch((err) => toast.error("Confira os dados e tente novamente"));
   };

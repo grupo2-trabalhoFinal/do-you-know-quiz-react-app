@@ -5,6 +5,8 @@ import { useContext } from "react";
 import { UserContext } from "../../context/UserContext";
 import { Redirect, useHistory } from "react-router-dom";
 import { TokenContext } from "../../context/TokenContent";
+import ButtonBack from "../../components/ButtonBack";
+
 
 const FirstPage = ({ auth, setAuth }) => {
   const userName = JSON.parse(localStorage.getItem("@userName"));
@@ -25,6 +27,13 @@ const FirstPage = ({ auth, setAuth }) => {
         Jogar
       </ButtonFirstPage>
       <ButtonFirstPage>Ranking</ButtonFirstPage>
+      <ButtonBack
+        text={"sair"}
+        backgroundColorButton={"#fff"}
+        fontSizeText={"2rem"}
+        color={"#1E4E9D"}
+        route={"/"}
+      />
     </FirstPageContainer>
   );
 };
