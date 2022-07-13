@@ -49,10 +49,10 @@ function Routes() {
         <PreQuestion />
       </Route>
       <Route exact path="/question">
-        <QuestionPage />
+        <QuestionPage auth={auth} />
       </Route>
       <Route exact path="/category">
-        <CategoryPage auth={auth} setAuth={setAuth} />
+        <CategoryPage auth={auth} />
       </Route>
 
       <Route exact path="/sucessful-questions">

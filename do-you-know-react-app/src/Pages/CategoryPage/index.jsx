@@ -31,7 +31,7 @@ const CategoryPage = ({ auth, setAuth }) => {
           {listCategorys.map((category, index) => {
             return (
               <ButtonCategory category={category} key={index}>
-                category
+                {category}
               </ButtonCategory>
             );
           })}
