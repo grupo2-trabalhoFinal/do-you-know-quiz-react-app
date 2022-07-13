@@ -2,12 +2,12 @@
 <br>
 <br>
 
-<h2> This is a final project of the Front-end course </h2>
+<h3> This is a final project of the Front-end course </h3>
 
 <br>
 
 
-<h3 style="font-weight: 400">Developer team :</h2>
+<h3 style="font-weight: 400">Developer team :</h3>
 <br>
 
 * Macson soares rocha
