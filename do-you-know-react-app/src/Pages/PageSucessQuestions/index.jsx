@@ -27,7 +27,7 @@ const PageSucessQuestions = () => {
 
         <StyledBackButton
           onClick={() => {
-            history.push("/category");
+            history.push("/ranking");
             setCountQuestion(0);
           }}
         >
