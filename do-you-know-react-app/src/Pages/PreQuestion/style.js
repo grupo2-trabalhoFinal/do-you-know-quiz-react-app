@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PreQuestionImgContainer = styled.div`
+export const PreQuestionImgContainer = styled.div `
   display: flex;
   align-items: center;
   justify-content: center;

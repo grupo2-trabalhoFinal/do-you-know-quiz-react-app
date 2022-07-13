@@ -3,11 +3,11 @@ import { createContext, useState } from "react";
 export const UserContext = createContext({});
 
 export const UserProvider = ({ children }) => {
-  const [userName, setUserName] = useState("Raquel amor da minha ");
   const [listCategory, setListCategory] = useState([]);
   const [singleQuestion, setSingleQuestion] = useState({});
   const [countQuestion, setCountQuestion] = useState(0);
 
+  const [userName, setUserName] = useState("");
   const changeName = (value) => {
     setUserName(value);
   };
