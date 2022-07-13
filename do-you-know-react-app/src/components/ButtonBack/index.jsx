@@ -1,6 +1,7 @@
 import { StyledButtonBack } from "./style";
 
 import { useHistory } from "react-router-dom";
+import { useState } from "react";
 
 const ButtonBack = ({
   route,
@@ -8,18 +9,23 @@ const ButtonBack = ({
   backgroundColorButton,
   color,
   fontSizeText,
+  exit,
 }) => {
   const history = useHistory();
+
+  const handleButton = (route) => {
+    // history.push(`${route}`);
+    if (exit) {
+      localStorage.clear();
+    }
+  };
 
   return (
     <StyledButtonBack
       backgroundColorButton={`${backgroundColorButton}`}
       color={`${color}`}
       fontSizeText={`${fontSizeText}`}
-      onClick={() => {
-        history.push(`${route}`);
-        route === "/" && localStorage.clear();
-      }}
+      onClick={() => handleButton(route)}
     >
       {text}
     </StyledButtonBack>

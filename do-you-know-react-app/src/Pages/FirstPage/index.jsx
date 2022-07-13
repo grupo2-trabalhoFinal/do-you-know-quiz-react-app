@@ -29,6 +29,7 @@ const FirstPage = ({ auth, setAuth }) => {
         Ranking
       </ButtonFirstPage>
       <ButtonBack
+        exit={true}
         text={"sair"}
         backgroundColorButton={"#fff"}
         fontSizeText={"2rem"}
