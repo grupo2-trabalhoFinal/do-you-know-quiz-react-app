@@ -39,7 +39,6 @@
 ### Do-you-know-quiz screens :
 
 <div>
-  <img align="center" alt="nodejs" src="https://driv![login home](https://user-images.githubusercontent.com/87198553/178793242-b9943c20-62b3-48e7-8a20-507f0daded47.JPG)
-e.google.com/file/d/1IX4ix5McOFwhB02hwSZplC2GP_2hoDee/view?usp=sharing" />
+  <img align="center" alt="nodejs" <a href="https://imgur.com/G2pQSRJ"><img src="https://i.imgur.com/G2pQSRJ.jpg" title="source: imgur.com" /></a> />
   
 </div>
