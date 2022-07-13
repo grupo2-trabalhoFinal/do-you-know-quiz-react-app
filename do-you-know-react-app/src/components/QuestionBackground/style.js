@@ -18,7 +18,7 @@ const QuestionBackground = styled.div`
   background-size: cover;
 
   img {
-    width: 20%;
+    width: 25%;
   }
 `;
 

@@ -7,6 +7,9 @@ export const StyledContainerList = styled.div`
   justify-content: space-around;
   padding: 15px;
   background-color: #eeeeee;
+  min-height: 100vh;
+  max-height: 200vh;
+
   img {
     width: 30%;
   }
@@ -42,6 +45,12 @@ export const StyledContainerList = styled.div`
     margin: 0 auto;
     height: 100%;
     color: #1e4e9d;
+  }
+
+  @media (min-width: 1024px) {
+    img {
+      width: 20%;
+    }
   }
 `;
 export const StyledContainerItem = styled.div`
