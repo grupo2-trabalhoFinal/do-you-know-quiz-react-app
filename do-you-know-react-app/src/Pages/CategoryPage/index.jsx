@@ -30,7 +30,7 @@ const CategoryPage = () => {
             );
           })}
         </ContainerListCategory>
-        <ButtonBack route={"/home"}>Voltar</ButtonBack>
+        <ButtonBack route={"/home"} text={"voltar"} />
       </StyledCategoryPage>
     </GlobalContainer>
   );
