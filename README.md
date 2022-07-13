@@ -2,7 +2,7 @@
 <br>
 <br>
 
-## This is a final project of the Front-end course
+<h2> This is a final project of the Front-end course </h2>
 
 <br>
 
