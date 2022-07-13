@@ -11,9 +11,10 @@ const FirstPage = ({ auth, setAuth }) => {
   const userName = JSON.parse(localStorage.getItem("@userName"));
 
   const history = useHistory();
+  console.log(setAuth);
 
-  if (!auth) {
-    history.push("/");
+  if (auth === false) {
+    return <Redirect to="/" />;
   }
   return (
     <FirstPageContainer>
@@ -25,16 +26,14 @@ const FirstPage = ({ auth, setAuth }) => {
       <ButtonFirstPage onClick={() => history.push("/category")}>
         Jogar
       </ButtonFirstPage>
-      <ButtonFirstPage onClick={() => history.push("/ranking")}>
-        Ranking
-      </ButtonFirstPage>
+      <ButtonFirstPage>Ranking</ButtonFirstPage>
       <ButtonBack
-        exit={true}
         text={"sair"}
         backgroundColorButton={"#fff"}
         fontSizeText={"2rem"}
         color={"#1E4E9D"}
         route={"/"}
+        setAuth={setAuth}
       />
     </FirstPageContainer>
   );

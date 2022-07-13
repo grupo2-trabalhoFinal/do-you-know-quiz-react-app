@@ -45,7 +45,7 @@ function Routes() {
         <SuccessfulRegisterPage />
       </Route>
       <Route exact path="/home">
-        <FirstPage auth={auth} setAut={setAuth}></FirstPage>
+        <FirstPage auth={auth} setAuth={setAuth} />
       </Route>
       <Route exact path="/ranking">
         <RankingPage />

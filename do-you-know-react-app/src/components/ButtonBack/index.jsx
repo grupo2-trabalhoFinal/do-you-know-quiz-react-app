@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { useState } from "react";
 
 const ButtonBack = ({
+  setAuth,
   route,
   text,
   backgroundColorButton,
@@ -12,12 +13,11 @@ const ButtonBack = ({
   exit,
 }) => {
   const history = useHistory();
+  console.log(setAuth);
 
-  const handleButton = (route) => {
-    // history.push(`${route}`);
-    if (exit) {
-      localStorage.clear();
-    }
+  const handleButton = () => {
+    localStorage.clear();
+    setAuth(false);
   };
 
   return (
@@ -25,7 +25,7 @@ const ButtonBack = ({
       backgroundColorButton={`${backgroundColorButton}`}
       color={`${color}`}
       fontSizeText={`${fontSizeText}`}
-      onClick={() => handleButton(route)}
+      onClick={() => handleButton()}
     >
       {text}
     </StyledButtonBack>
