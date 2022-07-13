@@ -15,7 +15,7 @@
 * Izaque Rolim Canavarro
 * Rodolfo Lara Cassaro
 * Thays de Lima Silva
-* Ramon souza dos santos
+* [Ramon souza dos santos](https://github.com/nordicr1)
 
 <br>
 
