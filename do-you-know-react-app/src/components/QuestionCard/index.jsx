@@ -14,8 +14,6 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
     setQuizCounter(quizCounter - 1);
   }, 3500);*/
 
-  console.log(quizCounter);
-
   useEffect(() => {
     if (quizCounter > 0) {
       const countTimeout = setTimeout(() => {
@@ -55,13 +53,19 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
 
   useEffect(() => {
     const userId = localStorage.getItem("@quizId");
-    const userToken = localStorage.getItem("@quizToken");
+    const userToken = JSON.parse(localStorage.getItem("@quizToken"));
+    console.log(userToken);
     const data = { points: pointsRanking };
-    api.patch(`/users/${userId}`, data, {
-      headers: {
-        Authorization: `Bearer ${userToken}`,
-      },
-    });
+    console.log(pointsRanking);
+    console.log(data);
+    api
+      .patch(`/users/${userId}`, data, {
+        headers: {
+          Authorization: `Bearer ${userToken}`,
+        },
+      })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   }, [pointsRanking]);
 
   function successfulAnswer(points) {
@@ -71,7 +75,7 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
 
   function wrongAnswer(points) {
     const userId = localStorage.getItem("@quizId");
-    const userToken = localStorage.getItem("@quizToken");
+    const userToken = JSON.parse(localStorage.getItem("@quizToken"));
     const data = { points: pointsRanking };
     api
       .patch(`/users/${userId}`, data, {
@@ -91,7 +95,6 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
   }, [question]);
 
   function shuffleArray(arr) {
-    console.log(arr);
     for (let i = question.answerOptions.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [arr[i], arr[j]] = [arr[j], arr[i]];

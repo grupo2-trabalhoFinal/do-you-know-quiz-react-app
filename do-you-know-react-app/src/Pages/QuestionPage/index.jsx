@@ -9,9 +9,9 @@ import LOGO from "../../Assets/LOGO.svg";
 const QuestionPage = ({ auth }) => {
   const history = useHistory();
 
-  if (auth) {
-    history.push("/");
-  }
+  // if (auth) {
+  //   history.push("/");
+  // }
   return (
     <QuestionBackground>
       <img src={`${LOGO}`} alt="quiz logo" />
