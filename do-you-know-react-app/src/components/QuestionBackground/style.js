@@ -9,7 +9,8 @@ const QuestionBackground = styled.div`
   row-gap: 30px;
 
   width: 100vw;
-  height: 100%;
+  min-height: 100vh;
+  max-height: 200vh;
 
   background: url(${blueBackground});
   background-repeat: no-repeat;
