@@ -10,12 +10,12 @@
 <h3 style="font-weight: 400">Developer team :</h3>
 <br>
 
-* [Macson soares rocha](https://github.com/maxdevsr)
+* [Macson Soares Rocha](https://github.com/maxdevsr)
 * [Nathan Theófilo Araûjo Molina](https://github.com/Natentado)
-* [Izaque Rolim Canavarro](https://github.com/Rolinzinho48)
 * [Rodolfo Lara Cassaro](https://github.com/rodolfolarac)
+* [Izaque Rolim Canavarro](https://github.com/Rolinzinho48)
+* [Ramon Souza dos Santos](https://github.com/nordicr1)
 * [Thays de Lima Silva](https://github.com/limasthays)
-* [Ramon souza dos santos](https://github.com/nordicr1)
 
 <br>
 
