@@ -10,7 +10,7 @@ const QuestionPage = ({auth}) => {
   
   const history = useHistory();
 
-  if (!auth) {
+  if (auth) {
     history.push("/");
   }
   return (
