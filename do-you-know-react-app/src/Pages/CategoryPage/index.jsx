@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import ButtonBack from "../../components/ButtonBack";
 import ButtonCategory from "../../components/ButtonCategory";
 import TitleCategory from "../../components/TitleCategory";
+import "./style.css";
 
 import { GlobalContainer } from "../../styles/global";
 import { ContainerListCategory, StyledCategoryPage } from "./style.jsx";
@@ -22,6 +23,10 @@ const CategoryPage = ({ auth }) => {
     history.push("/");
   }
 
+  function handleClick() {
+    history.push("/home");
+  }
+
   return (
     <GlobalContainer>
       <StyledCategoryPage>
@@ -36,7 +41,7 @@ const CategoryPage = ({ auth }) => {
             );
           })}
         </ContainerListCategory>
-        <ButtonBack route={"/home"} text={"voltar"} />
+        <button onClick={() => handleClick()}>Voltar</button>
       </StyledCategoryPage>
     </GlobalContainer>
   );
