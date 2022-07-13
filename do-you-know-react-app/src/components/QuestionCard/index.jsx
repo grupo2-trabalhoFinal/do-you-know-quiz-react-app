@@ -4,7 +4,15 @@ import { StyledAnswerButton } from "../ButtonAnswer/style";
 import { StyledQuestionCard } from "./style";
 
 export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
-  const [pointsRanking, setPointsRanking] = useState(0);
+  const userId = localStorage.getItem("@quizId");
+
+  async function neymar() {
+    const coutinho = await api
+      .get(`/users/${userId}`)
+      .then((res) => setPointsRanking(res.data.points));
+    return coutinho;
+  }
+  const [pointsRanking, setPointsRanking] = useState(neymar);
   console.log(pointsRanking);
 
   useEffect(() => {
