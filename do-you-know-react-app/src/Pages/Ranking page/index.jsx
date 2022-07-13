@@ -1,15 +1,25 @@
-import { RegisterContainer } from "./style";
+import {
+  StyledButton,
+  StyledContainerItem,
+  StyledContainerList,
+} from "./style";
+
 import Logo from "../../Assets/LOGO.svg";
 import "./style.js";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 
+import Pessoa from "../../Assets/Pessoa.svg";
+import { StyledContainerPerson } from "../../components/ButtonBack/style";
+import { useHistory } from "react-router-dom";
+
 const RankingPage = () => {
+  const history = useHistory();
   function startRanking() {
     api.get("/users").then((res) => setRanking(res.data));
   }
   const [ranking, setRanking] = useState([]);
-
+  console.log(ranking);
   const newRanking = ranking.sort(function (a, b) {
     if (a.points > b.points) {
       return -1;
@@ -17,9 +27,7 @@ const RankingPage = () => {
       return true;
     }
   });
-
   const userId = localStorage.getItem("@quizId");
-
   async function neymar() {
     const coutinho = await api
       .get(`/users/${userId}`)
@@ -27,25 +35,30 @@ const RankingPage = () => {
     return coutinho;
   }
   const [pointsRanking, setPointsRanking] = useState(neymar);
-
+  console.log(pointsRanking);
   useEffect(() => {
     startRanking();
   }, [pointsRanking]);
 
   return (
-    <RegisterContainer>
-      <h1>teste</h1>
+    <StyledContainerList>
       <img src={Logo} alt="Logo da página"></img>
       <ul>
-        {newRanking.map((user) => (
-          <li key={user.id}>
-            <h2>{user.name}</h2>
-            <h3>{user.points}</h3>
-          </li>
+        {newRanking.map((user, index) => (
+          <StyledContainerItem key={user.id}>
+            <li>
+              <StyledContainerPerson>
+                <img src={Pessoa} alt="people" />
+                <h2>{user.name}</h2>
+              </StyledContainerPerson>
+              <h3>{user.points} pontos</h3>
+            </li>
+            <p>#{index + 1}</p>
+          </StyledContainerItem>
         ))}
       </ul>
-    </RegisterContainer>
+      <StyledButton onClick={() => history.push("/")}>Voltar</StyledButton>
+    </StyledContainerList>
   );
 };
-
 export default RankingPage;

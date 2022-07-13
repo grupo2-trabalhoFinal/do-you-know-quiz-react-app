@@ -1,8 +1,5 @@
 import { StyledButtonBack } from "./style";
 
-import { useHistory } from "react-router-dom";
-import { useState } from "react";
-
 const ButtonBack = ({
   setAuth,
   route,
@@ -12,9 +9,6 @@ const ButtonBack = ({
   fontSizeText,
   exit,
 }) => {
-  const history = useHistory();
-  console.log(setAuth);
-
   const handleButton = () => {
     localStorage.clear();
     setAuth(false);

@@ -19,3 +19,8 @@ export const StyledButtonBack = styled.button`
 
   color: ${(props) => props.color || "#fff"};
 `;
+
+export const StyledContainerPerson = styled.div`
+  display: flex;
+  gap: 1.5rem;
+`;
