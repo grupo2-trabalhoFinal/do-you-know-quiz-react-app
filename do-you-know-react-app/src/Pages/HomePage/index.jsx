@@ -9,11 +9,13 @@ import { Redirect, useHistory } from "react-router-dom";
 const HomePage = ({auth,setAuth}) => {
   const history = useHistory();
 
+
   //ONCLICK NOS BUTTONS PARA REDIRECIONAMENTO ATÉ AS PAGINAS DO FORMULÁRIO.
 
   if (auth) {
     history.push("/home");
   }
+
   return (
     <HomePageContainer>
       <img src={Logo} alt="Logo" />

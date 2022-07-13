@@ -1,20 +1,20 @@
-import { useState } from "react";
-import api from "../../services/api";
+// import { useState } from "react";
+// import api from "../../services/api";
 
-const RankingOnline = () => {
-  const [ranking, setRanking] = useState([]);
+// const RankingOnline = ({pointsRanking}) => {
+//   const [ranking, setRanking] = useState([]);
+//   useEffect(() => {
+//   async function neymar() {
+//     const coutinho = await api
+//       .get("/users")
+//       .then((res) =>
+//         setRanking(...ranking, `${res.data.name}: ${res.data.points}`)
+//       );
+//     return coutinho;
+//   }
+//   neymar();
 
-  async function neymar() {
-    const coutinho = await api
-      .get("/users")
-      .then((res) =>
-        setRanking(...ranking, `${res.data.name}: ${res.data.points}`)
-      );
-    return coutinho;
-  }
-  neymar();
+//   console.log(ranking);
+// };
 
-  console.log(neymar);
-};
-
-export default RankingOnline;
+// export default RankingOnline;

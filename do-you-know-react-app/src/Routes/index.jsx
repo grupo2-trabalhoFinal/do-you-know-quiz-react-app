@@ -11,6 +11,8 @@ import RegisterPage from "../Pages/RegisterPage";
 import SuccessfulRegisterPage from "../Pages/SuccessfulRegisterPage";
 import { useEffect } from "react";
 import PageSucessQuestions from "../Pages/PageSucessQuestions";
+import RankingOnline from "../components/RankingOnline";
+import RankingPage from "../Pages/Ranking page";
 
 function Routes() {
   const [auth, setAuth] = useState(false);
@@ -44,6 +46,9 @@ function Routes() {
       </Route>
       <Route exact path="/home">
         <FirstPage auth={auth} setAut={setAuth}></FirstPage>
+      </Route>
+      <Route exact path="/ranking">
+        <RankingPage />
       </Route>
       <Route exact path="/prequestion">
         <PreQuestion />

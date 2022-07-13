@@ -59,7 +59,7 @@ const LoginPage = ({ auth, setAuth }) => {
         const id = response.data.user.id;
         localStorage.setItem("@quizId", JSON.stringify(id));
 
-        return history.push("/category");
+        return history.push("/home");
 
       })
       .catch((err) => toast.error("Confira os dados e tente novamente"));

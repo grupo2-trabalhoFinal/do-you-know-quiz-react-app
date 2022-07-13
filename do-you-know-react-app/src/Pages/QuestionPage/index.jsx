@@ -6,7 +6,7 @@ import LOGO from "../../Assets/LOGO.svg";
 
 //incluir o onclick no button
 
-const QuestionPage = ([auth]) => {
+const QuestionPage = ({ auth }) => {
   const history = useHistory();
 
   if (auth) {
