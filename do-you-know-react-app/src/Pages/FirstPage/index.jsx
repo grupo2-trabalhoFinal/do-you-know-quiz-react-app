@@ -7,7 +7,6 @@ import { Redirect, useHistory } from "react-router-dom";
 import { TokenContext } from "../../context/TokenContent";
 import ButtonBack from "../../components/ButtonBack";
 
-
 const FirstPage = ({ auth, setAuth }) => {
   const userName = JSON.parse(localStorage.getItem("@userName"));
 
@@ -26,7 +25,9 @@ const FirstPage = ({ auth, setAuth }) => {
       <ButtonFirstPage onClick={() => history.push("/category")}>
         Jogar
       </ButtonFirstPage>
-      <ButtonFirstPage>Ranking</ButtonFirstPage>
+      <ButtonFirstPage onClick={() => history.push("/ranking")}>
+        Ranking
+      </ButtonFirstPage>
       <ButtonBack
         text={"sair"}
         backgroundColorButton={"#fff"}
