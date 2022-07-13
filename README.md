@@ -19,7 +19,7 @@
 
 <br>
 
-<h3>What is the problem to be solved ?</h3>
+<h3>What is the problem to be solved ? What is the solution that the application brings?</h3>
 
 <br>
 
