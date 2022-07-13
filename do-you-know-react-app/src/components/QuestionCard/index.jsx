@@ -45,6 +45,23 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
       .then(() => setPointsRanking(pointsRanking - points));
   }
 
+  const [currentsQuestions, setCurrentsQuestions] = useState(
+    question.answerOptions
+  );
+
+  useEffect(() => {
+    setCurrentsQuestions(shuffleArray(question.answerOptions));
+  }, [question]);
+
+  function shuffleArray(arr) {
+    console.log(arr);
+    for (let i = question.answerOptions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+
+    return arr;
+  }
   return (
     <>
       {
