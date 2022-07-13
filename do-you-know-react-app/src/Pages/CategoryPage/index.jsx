@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
+
+import ButtonBack from "../../components/ButtonBack";
 import ButtonCategory from "../../components/ButtonCategory";
 import TitleCategory from "../../components/TitleCategory";
 
@@ -29,6 +31,7 @@ const CategoryPage = () => {
             );
           })}
         </ContainerListCategory>
+        <ButtonBack route={"/home"}>Voltar</ButtonBack>
       </StyledCategoryPage>
     </GlobalContainer>
   );

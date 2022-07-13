@@ -9,7 +9,8 @@ export const StyledButtonBack = styled.button`
   line-height: 1.75rem;
 
   text-align: center;
-  padding: 0.1875rem 2.6875rem;
+  padding: 0.5rem 2.6875rem;
+  margin-top: 5rem;
 
   border: none;
   border-radius: 0.875rem;
