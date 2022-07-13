@@ -10,7 +10,7 @@
 <h3 style="font-weight: 400">Developer team :</h3>
 <br>
 
-* Macson soares rocha
+* [Macson soares rocha](https://github.com/maxdevsr)
 * Nathan Theófilo Araûjo Molina
 * Izaque Rolim Canavarro
 * Rodolfo Lara Cassaro
