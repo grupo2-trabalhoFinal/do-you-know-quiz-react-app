@@ -1,8 +1,5 @@
 import { StyledButtonBack } from "./style";
 
-import { useHistory } from "react-router-dom";
-import { useState } from "react";
-
 const ButtonBack = ({
   route,
   text,
@@ -11,8 +8,6 @@ const ButtonBack = ({
   fontSizeText,
   exit,
 }) => {
-  const history = useHistory();
-
   const handleButton = (route) => {
     // history.push(`${route}`);
     if (exit) {
