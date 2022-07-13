@@ -53,7 +53,7 @@ const RankingPage = () => {
               </StyledContainerPerson>
               <h3>{user.points} pontos</h3>
             </li>
-            <p>#{index}</p>
+            <p>#{index + 1}</p>
           </StyledContainerItem>
         ))}
       </ul>
