@@ -1,17 +1,22 @@
 import styled from "styled-components";
+import rankingBackground from "../../Assets/rankingBackground.svg";
 
 export const RegisterContainer = styled.div `
+  background: url(${rankingBackground});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 
   padding: 15px;
 
   width: 100vw;
-  height: 100vh;
+  max-height: 100vh;
 
   background-color: #eeeeee;
 
@@ -33,6 +38,47 @@ export const RegisterContainer = styled.div `
   @media (min-width: 924px) {
     img {
       width: 25vw;
+    }
+  }
+`;
+
+export const ContentRanking = styled.div `
+  max-height: 100vh;
+  overflow: scroll-y;
+
+  box-sizing: border-box;
+  padding: 15px 35px;
+  background-color: white;
+
+  border-radius: 50px;
+  box-shadow: 61px 24px 80px rgba(0, 0, 0, 0.25);
+  color: #1e4e9d;
+  border: 1px solid white;
+  transition: 0.5s ease;
+
+  font-size: 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  img {
+    width: 10vw;
+  }
+  h2 {
+    width: 10vw;
+  }
+
+  @media (min-width: 550px) {
+    padding: 10px 110px;
+    font-size: 1.5rem;
+  }
+  @media (min-width: 1024px) {
+    padding: 10px 180px;
+    font-size: 1.5rem;
+    img {
+      width: 5vw;
     }
   }
 `;

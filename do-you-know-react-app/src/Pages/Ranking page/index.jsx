@@ -1,9 +1,10 @@
-import { RegisterContainer } from "./style";
 import Logo from "../../Assets/LOGO.svg";
 import "./style.js";
 import RankingOnline from "../../components/RankingOnline";
 import { useEffect, useState } from "react";
 import api from "../../services/api";
+import { RegisterContainer, ContentRanking } from "./style";
+import userIcon from "../../Assets/userIcon.svg";
 
 const RankingPage = () => {
   function startRanking() {
@@ -35,16 +36,20 @@ const RankingPage = () => {
     startRanking();
   }, [pointsRanking]);
 
+  newRanking.splice(10, newRanking.length);
+
   return (
     <RegisterContainer>
       <h1>teste</h1>
       <img src={Logo} alt="Logo da página"></img>
       <ul>
-        {newRanking.map((user) => (
-          <li key={user.id}>
+        {newRanking.map((user, index) => (
+          <ContentRanking key={user.id}>
+            <img src={userIcon} alt="icone"></img>
             <h2>{user.name}</h2>
-            <h3>{user.points}</h3>
-          </li>
+            <h2>{user.points} pontos</h2>
+            <h2>#{index + 1}</h2>
+          </ContentRanking>
         ))}
       </ul>
     </RegisterContainer>
@@ -52,13 +57,3 @@ const RankingPage = () => {
 };
 
 export default RankingPage;
-
-//   function compare(a, b) {
-//     if (a < b) {
-//       return -1;
-//     }
-//     if (a > b) {
-//       return 1;
-//     }
-//     return 0;
-//   }
