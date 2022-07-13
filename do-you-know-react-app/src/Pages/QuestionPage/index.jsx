@@ -1,4 +1,4 @@
-import { useHistory } from 'react-douter-dom'
+import { useHistory } from 'react-router-dom'
 import { ExitButton } from "../../components/ExitButton";
 import QuestionBackground from "../../components/QuestionBackground/style";
 import QuestionContainer from "../../components/QuestionContainer";
