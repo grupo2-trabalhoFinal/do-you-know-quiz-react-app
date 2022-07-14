@@ -6,9 +6,8 @@ import {
 import Logo from "../../Assets/LOGO.svg";
 import { Redirect, useHistory } from "react-router-dom";
 
-const HomePage = ({auth,setAuth}) => {
+const HomePage = ({ auth, setAuth }) => {
   const history = useHistory();
-
 
   //ONCLICK NOS BUTTONS PARA REDIRECIONAMENTO ATÉ AS PAGINAS DO FORMULÁRIO.
 

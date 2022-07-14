@@ -11,7 +11,6 @@ import RegisterPage from "../Pages/RegisterPage";
 import SuccessfulRegisterPage from "../Pages/SuccessfulRegisterPage";
 import { useEffect } from "react";
 import PageSucessQuestions from "../Pages/PageSucessQuestions";
-import RankingOnline from "../components/RankingOnline";
 import RankingPage from "../Pages/Ranking page";
 
 function Routes() {
