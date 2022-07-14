@@ -35,7 +35,11 @@ const FirstPage = ({ auth, setAuth }) => {
         route={"/"}
         setAuth={setAuth}
       />
-      <a href="https://github.com/grupo2-trabalhoFinal/do-you-know-quiz-react-app/tree/main">
+      <a
+        href="https://github.com/grupo2-trabalhoFinal/do-you-know-quiz-react-app/tree/main"
+        target="_blank"
+        rel="noreferrer"
+      >
         <AiFillGithub />
       </a>
     </FirstPageContainer>
