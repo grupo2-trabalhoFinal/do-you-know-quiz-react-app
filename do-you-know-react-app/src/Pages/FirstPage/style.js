@@ -24,6 +24,13 @@ export const FirstPageContainer = styled.div`
     font-size: 2rem;
   }
 
+  svg {
+    cursor: pointer;
+    width: 5rem;
+    height: 4rem;
+    color: black;
+  }
+
   & > img {
     width: 35vw;
   }
@@ -34,11 +41,11 @@ export const FirstPageContainer = styled.div`
 
   @media (min-width: 1024px) {
     img {
-      width: 20vw;
+      width: 15vw;
     }
 
     div > img {
-      width: 10vw;
+      width: 8vw;
     }
   }
 `;

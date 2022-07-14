@@ -15,6 +15,8 @@ export const StyledContainerList = styled.div`
   }
   ul {
     width: 90vw;
+    max-height: 75vh;
+    overflow: auto;
   }
   li {
     display: flex;

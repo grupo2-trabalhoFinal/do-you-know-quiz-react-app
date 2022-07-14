@@ -3,6 +3,8 @@ import Logo from "../../Assets/LOGO.svg";
 import Pessoa from "../../Assets/Pessoa.svg";
 import { Redirect, useHistory } from "react-router-dom";
 import ButtonBack from "../../components/ButtonBack";
+import { AiFillGithub } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const FirstPage = ({ auth, setAuth }) => {
   const userName = JSON.parse(localStorage.getItem("@userName"));
@@ -33,6 +35,9 @@ const FirstPage = ({ auth, setAuth }) => {
         route={"/"}
         setAuth={setAuth}
       />
+      <a href="https://github.com/grupo2-trabalhoFinal/do-you-know-quiz-react-app/tree/main">
+        <AiFillGithub />
+      </a>
     </FirstPageContainer>
   );
 };

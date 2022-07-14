@@ -21,7 +21,8 @@ const RegisterPage = () => {
     name: yup
       .string()
       .required("Usuário obrigatório !")
-      .min(3, "Mínimo de 3 caractéres !"),
+      .min(3, "Mínimo de 3 caractéres !")
+      .max(24, "Máximo de 24 caractéres"),
 
     email: yup
       .string()
