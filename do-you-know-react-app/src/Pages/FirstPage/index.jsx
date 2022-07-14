@@ -4,7 +4,6 @@ import Pessoa from "../../Assets/Pessoa.svg";
 import { Redirect, useHistory } from "react-router-dom";
 import ButtonBack from "../../components/ButtonBack";
 import { AiFillGithub } from "react-icons/ai";
-import { Link } from "react-router-dom";
 
 const FirstPage = ({ auth, setAuth }) => {
   const userName = JSON.parse(localStorage.getItem("@userName"));

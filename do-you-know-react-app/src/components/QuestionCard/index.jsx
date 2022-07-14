@@ -7,7 +7,7 @@ import Counter from "../Counter";
 import { StyledQuestionCard } from "./style";
 
 export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
-  const [quizCounter, setQuizCounter] = useState(15);
+  const [quizCounter, setQuizCounter] = useState(20);
   const [myTimeout, setMyTimeout] = useState(0);
 
   useEffect(() => {
@@ -17,14 +17,14 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
       }, 1000);
       setMyTimeout(countTimeout);
     } else {
-      setQuizCounter(15);
+      setQuizCounter(20);
       fowardQuestion();
     }
   }, [quizCounter]);
 
   function handleClick(isCorrect) {
     clearTimeout(myTimeout);
-    setQuizCounter(15);
+    setQuizCounter(20);
     fowardQuestion();
 
     if (isCorrect) {

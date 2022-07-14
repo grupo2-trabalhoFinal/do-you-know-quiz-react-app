@@ -20,6 +20,12 @@ const QuestionBackground = styled.div`
   img {
     width: 25%;
   }
+
+  @media (min-width: 1600px) {
+    img {
+      width: 20%;
+    }
+  }
 `;
 
 export default QuestionBackground;
