@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import { UserContext } from "../../context/UserContext";
 import api from "../../services/api";
 import { StyledAnswerButton } from "../ButtonAnswer/style";
@@ -58,7 +59,7 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
           Authorization: `Bearer ${userToken}`,
         },
       })
-      .then((res) => console.log(res))
+      .then((_) => toast.success("susésu"))
       .catch((err) => console.log(err));
   }, [pointsRanking]);
 

@@ -54,6 +54,17 @@ export const StyledContainerList = styled.div`
       width: 20%;
     }
   }
+
+  @media (min-width: 1600px) {
+    img {
+      width: 15%;
+    }
+    ul {
+      width: 70vw;
+      max-height: 60vh;
+      overflow: auto;
+    }
+  }
 `;
 export const StyledContainerItem = styled.div`
   height: 2.5rem;

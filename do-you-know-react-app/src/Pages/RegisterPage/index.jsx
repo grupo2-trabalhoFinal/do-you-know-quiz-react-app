@@ -13,6 +13,7 @@ import { useHistory } from "react-router-dom";
 import api from "../../services/api";
 import { toast } from "react-toastify";
 import "./style.css";
+import { motion } from "framer-motion";
 
 const RegisterPage = () => {
   const history = useHistory();
@@ -62,77 +63,83 @@ const RegisterPage = () => {
   };
 
   return (
-    <RegisterContainer>
-      <RegisterHeader>
-        <button onClick={() => history.push("/")}>VOLTAR</button>
-      </RegisterHeader>
+    <motion.div
+      initial={{ x: -250 }}
+      animate={{ x: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      <RegisterContainer>
+        <RegisterHeader>
+          <button onClick={() => history.push("/")}>VOLTAR</button>
+        </RegisterHeader>
 
-      <img src={Logo} alt="Logo da página"></img>
+        <img src={Logo} alt="Logo da página"></img>
 
-      <RegisterForm onSubmit={handleSubmit(submitedForm)}>
-        <label>
-          USUÁRIO {errors.name && <span>- {errors.name.message}</span>}
-        </label>
-        <InputExample
-          name="name"
-          register={register}
-          placeholder="Crie seu nome de usuario !"
-        ></InputExample>
+        <RegisterForm onSubmit={handleSubmit(submitedForm)}>
+          <label>
+            USUÁRIO {errors.name && <span>- {errors.name.message}</span>}
+          </label>
+          <InputExample
+            name="name"
+            register={register}
+            placeholder="Crie seu nome de usuario !"
+          ></InputExample>
 
-        <label>
-          EMAIL {errors.email && <span>- {errors.email.message}</span>}
-        </label>
-        <InputExample
-          name="email"
-          register={register}
-          placeholder="Seu email !"
-        ></InputExample>
+          <label>
+            EMAIL {errors.email && <span>- {errors.email.message}</span>}
+          </label>
+          <InputExample
+            name="email"
+            register={register}
+            placeholder="Seu email !"
+          ></InputExample>
 
-        <label>
-          IDADE
-          {errors.age && <span>- {errors.age.message}</span>}
-        </label>
-        <InputExample
-          name="age"
-          register={register}
-          placeholder="Sua idade"
-          type="text"
-        ></InputExample>
+          <label>
+            IDADE
+            {errors.age && <span>- {errors.age.message}</span>}
+          </label>
+          <InputExample
+            name="age"
+            register={register}
+            placeholder="Sua idade"
+            type="text"
+          ></InputExample>
 
-        <label>
-          SENHA {errors.password && <span>- {errors.password.message}</span>}
-        </label>
-        <InputExample
-          name="password"
-          register={register}
-          placeholder="************"
-          type="password"
-        ></InputExample>
+          <label>
+            SENHA {errors.password && <span>- {errors.password.message}</span>}
+          </label>
+          <InputExample
+            name="password"
+            register={register}
+            placeholder="************"
+            type="password"
+          ></InputExample>
 
-        <label>
-          CONFIRMAR SENHA{" "}
-          {errors.confirmPassword && (
-            <span>- {errors.confirmPassword.message}</span>
-          )}
-        </label>
-        <InputExample
-          name="confirmPassword"
-          register={register}
-          placeholder="************"
-          type="password"
-        ></InputExample>
+          <label>
+            CONFIRMAR SENHA{" "}
+            {errors.confirmPassword && (
+              <span>- {errors.confirmPassword.message}</span>
+            )}
+          </label>
+          <InputExample
+            name="confirmPassword"
+            register={register}
+            placeholder="************"
+            type="password"
+          ></InputExample>
 
-        <InputExample
-          className="none"
-          name="points"
-          register={register}
-        ></InputExample>
+          <InputExample
+            className="none"
+            name="points"
+            register={register}
+          ></InputExample>
 
-        <div>
-          <RegisterButton type="submit">CADASTRAR</RegisterButton>
-        </div>
-      </RegisterForm>
-    </RegisterContainer>
+          <div>
+            <RegisterButton type="submit">CADASTRAR</RegisterButton>
+          </div>
+        </RegisterForm>
+      </RegisterContainer>
+    </motion.div>
   );
 };
 

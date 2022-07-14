@@ -15,6 +15,7 @@ import { UserContext } from "../../context/UserContext";
 import api from "../../services/api";
 import { toast } from "react-toastify";
 import { TokenContext } from "../../context/TokenContent";
+import { motion } from "framer-motion";
 
 const LoginPage = ({ auth, setAuth }) => {
   const { userName, changeName } = useContext(UserContext);
@@ -67,38 +68,44 @@ const LoginPage = ({ auth, setAuth }) => {
   }
 
   return (
-    <RegisterContainer>
-      <RegisterHeader>
-        <button onClick={() => history.push("/")}>VOLTAR</button>
-      </RegisterHeader>
+    <motion.div
+      initial={{ x: 250 }}
+      animate={{ x: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      <RegisterContainer>
+        <RegisterHeader>
+          <button onClick={() => history.push("/")}>VOLTAR</button>
+        </RegisterHeader>
 
-      <img src={Logo} alt="Logo da página"></img>
+        <img src={Logo} alt="Logo da página"></img>
 
-      <RegisterForm onSubmit={handleSubmit(submitedForm)}>
-        <label>
-          EMAIL {errors.email && <span>- {errors.email.message}</span>}
-        </label>
-        <InputExample
-          name="email"
-          register={register}
-          placeholder="Seu email !"
-        ></InputExample>
+        <RegisterForm onSubmit={handleSubmit(submitedForm)}>
+          <label>
+            EMAIL {errors.email && <span>- {errors.email.message}</span>}
+          </label>
+          <InputExample
+            name="email"
+            register={register}
+            placeholder="Seu email !"
+          ></InputExample>
 
-        <label>
-          SENHA {errors.password && <span>- {errors.password.message}</span>}
-        </label>
-        <InputExample
-          name="password"
-          register={register}
-          placeholder="************"
-          type="password"
-        ></InputExample>
+          <label>
+            SENHA {errors.password && <span>- {errors.password.message}</span>}
+          </label>
+          <InputExample
+            name="password"
+            register={register}
+            placeholder="************"
+            type="password"
+          ></InputExample>
 
-        <div>
-          <RegisterButton type="submit">LOGIN</RegisterButton>
-        </div>
-      </RegisterForm>
-    </RegisterContainer>
+          <div>
+            <RegisterButton type="submit">LOGIN</RegisterButton>
+          </div>
+        </RegisterForm>
+      </RegisterContainer>
+    </motion.div>
   );
 };
 

@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { Switch, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Switch, Route, useLocation } from "react-router-dom";
+
 import CategoryPage from "../Pages/CategoryPage";
 import HomePage from "../Pages/HomePage";
 import FirstPage from "../Pages/FirstPage";
@@ -7,12 +8,10 @@ import LoginPage from "../Pages/LoginPage";
 import PreQuestion from "../Pages/PreQuestion";
 import QuestionPage from "../Pages/QuestionPage";
 import RegisterPage from "../Pages/RegisterPage";
-
 import SuccessfulRegisterPage from "../Pages/SuccessfulRegisterPage";
-import { useEffect } from "react";
 import PageSucessQuestions from "../Pages/PageSucessQuestions";
-import RankingOnline from "../components/RankingOnline";
 import RankingPage from "../Pages/Ranking page";
+import { AnimatePresence } from "framer-motion";
 
 function Routes() {
   const [auth, setAuth] = useState(false);
@@ -30,40 +29,44 @@ function Routes() {
     }
   }, [token]);
 
-  return (
-    <Switch>
-      <Route exact path="/">
-        <HomePage auth={auth} setAuth={setAuth} />
-      </Route>
-      <Route exact path="/register">
-        <RegisterPage />
-      </Route>
-      <Route exact path="/login">
-        <LoginPage auth={auth} setAuth={setAuth} />
-      </Route>
-      <Route exact path="/successful-register">
-        <SuccessfulRegisterPage />
-      </Route>
-      <Route exact path="/home">
-        <FirstPage auth={auth} setAuth={setAuth} />
-      </Route>
-      <Route exact path="/ranking">
-        <RankingPage />
-      </Route>
-      <Route exact path="/prequestion">
-        <PreQuestion />
-      </Route>
-      <Route exact path="/question">
-        <QuestionPage auth={auth} />
-      </Route>
-      <Route exact path="/category">
-        <CategoryPage auth={auth} />
-      </Route>
+  const location = useLocation();
 
-      <Route exact path="/sucessful-questions">
-        <PageSucessQuestions />
-      </Route>
-    </Switch>
+  return (
+    <AnimatePresence>
+      <Switch>
+        <Route exact path="/">
+          <HomePage auth={auth} setAuth={setAuth} />
+        </Route>
+        <Route exact path="/register">
+          <RegisterPage />
+        </Route>
+        <Route exact path="/login">
+          <LoginPage auth={auth} setAuth={setAuth} />
+        </Route>
+        <Route exact path="/successful-register">
+          <SuccessfulRegisterPage />
+        </Route>
+        <Route exact path="/home">
+          <FirstPage auth={auth} setAuth={setAuth} />
+        </Route>
+        <Route exact path="/ranking">
+          <RankingPage />
+        </Route>
+        <Route exact path="/prequestion">
+          <PreQuestion />
+        </Route>
+        <Route exact path="/question">
+          <QuestionPage auth={auth} />
+        </Route>
+        <Route exact path="/category">
+          <CategoryPage auth={auth} />
+        </Route>
+
+        <Route exact path="/sucessful-questions">
+          <PageSucessQuestions />
+        </Route>
+      </Switch>
+    </AnimatePresence>
   );
 }
 
