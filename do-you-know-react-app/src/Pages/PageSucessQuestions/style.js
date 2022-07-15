@@ -28,6 +28,7 @@ export const StyledSucessQuestionsContainer = styled.div`
     max-width: 90vw;
   }
   h3 {
+    text-align: center;
     font-size: 2rem;
   }
   div {

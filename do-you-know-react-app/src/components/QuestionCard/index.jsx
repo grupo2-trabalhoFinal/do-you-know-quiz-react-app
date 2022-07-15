@@ -24,15 +24,17 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
   }, [quizCounter]);
 
   function handleClick(isCorrect) {
-    clearTimeout(myTimeout);
-    setQuizCounter(20);
-    fowardQuestion();
-
     if (isCorrect) {
       successfulAnswer(10);
     } else {
       wrongAnswer(5);
     }
+
+    clearTimeout(myTimeout);
+    setTimeout(() => {
+      setQuizCounter(20);
+      fowardQuestion();
+    }, 600);
   }
 
   const userId = localStorage.getItem("@quizId");
