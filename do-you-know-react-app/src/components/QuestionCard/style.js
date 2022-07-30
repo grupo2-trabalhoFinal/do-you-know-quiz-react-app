@@ -21,4 +21,10 @@ export const StyledQuestionCard = styled.div`
     font-size: 1.5rem;
     text-align: center;
   }
+
+  @media (max-width: 320px) {
+    button {
+      min-width: 15rem;
+    }
+  }
 `;

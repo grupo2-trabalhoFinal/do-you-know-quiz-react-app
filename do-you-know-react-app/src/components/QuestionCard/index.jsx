@@ -31,10 +31,11 @@ export const QuestionCard = ({ question, fowardQuestion, clicked }) => {
     }
 
     clearTimeout(myTimeout);
+
     setTimeout(() => {
       setQuizCounter(20);
       fowardQuestion();
-    }, 600);
+    }, 1000);
   }
 
   const userId = localStorage.getItem("@quizId");
